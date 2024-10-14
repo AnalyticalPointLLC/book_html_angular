@@ -11,6 +11,7 @@
       "prefix": "app",
       "architect": {
         "build": {
+
           "builder": "@angular-devkit/build-angular:application",
           "options": {
             "outputPath": "dist/libreria_4_html",
@@ -23,32 +24,63 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
+                "input": "src/assets",
+                "output": "assets"
               }
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/css/bootstrap.min.css",
+              "src/assets/css/all.min.css",
+              "src/assets/css/animate.css",
+              "src/assets/css/magnific-popup.css",
+              "src/assets/css/meanmenu.css",
+              "src/assets/css/swiper-bundle.min.css",
+              "src/assets/css/nice-select.css",
+              "src/assets/css/icomoon.css",
+              "src/assets/css/main.css",
+              "node_modules/swiper/swiper-bundle.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/jquery-3.7.1.min.js",
+              "src/assets/js/viewport.jquery.js",
+              "src/assets/js/bootstrap.bundle.min.js",
+              "src/assets/js/jquery.nice-select.min.js",
+              "src/assets/js/jquery.waypoints.js",
+              "src/assets/js/jquery.counterup.min.js",
+              "src/assets/js/swiper-bundle.min.js",
+              "src/assets/js/jquery.meanmenu.min.js",
+              "src/assets/js/jquery.magnific-popup.min.js",
+              "src/assets/js/wow.min.js",
+              "src/assets/js/gsap.min.js",
+              "src/assets/js/main.js"
+            ]
           },
           "configurations": {
             "production": {
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kB",
-                  "maximumError": "1MB"
+                  "maximumWarning": "2MB",
+                  "maximumError": "3MB"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kB",
-                  "maximumError": "4kB"
+                  "maximumWarning": "300kB",
+                  "maximumError": "400kB"
                 }
               ],
               "outputHashing": "all"
             },
             "development": {
-              "optimization": false,
+              "optimization": {
+                "scripts": true,
+                "styles": {
+                  "minify": true,
+                  "inlineCritical": false
+                },
+                "fonts": true
+              },
               "extractLicenses": false,
               "sourceMap": true
             }
@@ -81,16 +113,43 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
+                "input": "src/assets",
+                "output": "assets"
               }
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/css/bootstrap.min.css",
+              "src/assets/css/all.min.css",
+              "src/assets/css/animate.css",
+              "src/assets/css/magnific-popup.css",
+              "src/assets/css/meanmenu.css",
+              "src/assets/css/swiper-bundle.min.css",
+              "src/assets/css/nice-select.css",
+              "src/assets/css/icomoon.css",
+              "src/assets/css/main.css",
+              "node_modules/swiper/swiper-bundle.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/jquery-3.7.1.min.js",
+              "src/assets/js/viewport.jquery.js",
+              "src/assets/js/bootstrap.bundle.min.js",
+              "src/assets/js/jquery.nice-select.min.js",
+              "src/assets/js/jquery.waypoints.js",
+              "src/assets/js/jquery.counterup.min.js",
+              "src/assets/js/swiper-bundle.min.js",
+              "src/assets/js/jquery.meanmenu.min.js",
+              "src/assets/js/jquery.magnific-popup.min.js",
+              "src/assets/js/wow.min.js",
+              "src/assets/js/gsap.min.js",
+              "src/assets/js/main.js"
+            ]
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

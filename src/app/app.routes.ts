@@ -1,9 +1,11 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
-
+import { DetailbookComponent } from './body/detailbook/detailbook.component';
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'contact', component: ContactComponent }
+  { path: 'home', component: HomeComponent },
+  { path: 'contact', component: ContactComponent },
+  { path: 'detail-book/:id', component: DetailbookComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
 ];

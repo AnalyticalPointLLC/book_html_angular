@@ -1,5 +1,5 @@
-  <!-- Hero Section start  -->
-  <div class="hero-section hero-1 fix">
+<!-- Hero Section start  -->
+<div class="hero-section hero-1 fix">
     <div class="container">
         <div class="row">
             <div class="col-12 col-xl-8 col-lg-6">
@@ -97,51 +97,65 @@
 <!-- Shop Section start  -->
 <!-- API 1 - Shop Section start -->
 <section class="shop-section section-padding fix pt-0">
-  <div class="container">
-    <div class="section-title-area">
-      <div class="section-title">
-        <h2>Featured Books</h2>
-      </div>
-      <button (click)="toggleShowMore()" class="theme-btn transparent-btn">
-        {{ showMore ? 'Show Less' : 'Explore More' }} <i class="fa-solid fa-arrow-right-long"></i>
-      </button>
+    <div class="container">
+        <div class="section-title-area">
+            <div class="section-title">
+                <h2>Featured Books</h2>
+            </div>
+            <button (click)="toggleShowMore()" class="theme-btn transparent-btn">
+                {{ showMore ? 'Show Less' : 'Explore More' }} <i class="fa-solid fa-arrow-right-long"></i>
+            </button>
+        </div>
+        <div class="book-shop-wrapper">
+            <div class="shop-box-items style-2" *ngFor="let product of (showMore ? products : products | slice:0:5)">
+                <div class="book-thumb center">
+                    <a [routerLink]="['/detail-book', product.id]" routerLinkActive="active" ariaCurrentWhenActive="page">
+                        <img [src]="product.imagen_tapa" alt="{{ product.titulo }}">
+                    </a>
+                    <ul class="post-box">
+                        <li>
+                            Hot
+                        </li>
+                        <li>
+                            -30%
+                        </li>
+                    </ul>
+                    <ul class="shop-icon d-grid justify-content-center align-items-center">
+                        <li>
+                            <a><i class="far fa-heart"></i></a>
+                        </li>
+                        <li>
+                            <a>
+                                <img class="icon" src="assets/img/icon/shuffle.svg" alt="svg-icon">
+                            </a>
+                        </li>
+                        <li>
+                            <a><i class="far fa-eye"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="shop-content">
+                    <h5>{{ product.autor }}</h5>
+                    <h3><a [routerLink]="['/detail-book', product.id]" routerLinkActive="active" ariaCurrentWhenActive="page">{{ product.titulo }}</a></h3>
+                    <ul class="price-list">
+                        <li>S/. {{ product.pvp }}</li>
+                    </ul>
+                    <ul class="author-post">
+                        <li class="authot-list">
+                            <span class="content">{{product.pais_edicion}}</span>
+                            <span class="content">{{ product.editor }}</span>
+                        </li>
+                        <li class="star">
+                        </li>
+                    </ul>
+                </div>
+                <div class="shop-button">
+                    <a href="shop-details.html" class="theme-btn"><i class="fa-solid fa-basket-shopping"></i> Add To
+                        Cart</a>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="book-shop-wrapper">
-      <div class="shop-box-items style-2" *ngFor="let product of (showMore ? products : products | slice:0:5)">
-        <div class="book-thumb center">
-          <a [routerLink]="['/shop-details', product.id]">
-            <img [src]="product.imageUrl" alt="{{ product.title }}">
-          </a>
-          <ul class="post-box">
-            <li *ngIf="product.promocion">Promotion</li>
-          </ul>
-          <ul class="shop-icon d-grid justify-content-center align-items-center">
-            <li><a href="shop-cart.html"><i class="far fa-heart"></i></a></li>
-            <li><a href="shop-cart.html"><img class="icon" src="assets/img/icon/shuffle.svg" alt="svg-icon"></a></li>
-            <li><a [routerLink]="['/shop-details', product.id]"><i class="far fa-eye"></i></a></li>
-          </ul>
-        </div>
-        <div class="shop-content">
-          <h5>{{ product.title }}</h5>
-          <h3><a [routerLink]="['/shop-details', product.id]">{{ product.title }}</a></h3>
-          <ul class="price-list">
-            <li>${{ product.price }}</li>
-          </ul>
-          <ul class="author-post">
-            <li class="authot-list">
-              <span class="thumb"><img [src]="product.authorImageUrl || 'ruta/a/imagen/placeholder.png'" alt="img"></span>
-              <span class="content">{{ product.author }}</span>
-            </li>
-            <li class="star">
-            </li>
-          </ul>
-        </div>
-        <div class="shop-button">
-          <a href="shop-details.html" class="theme-btn"><i class="fa-solid fa-basket-shopping"></i> Add To Cart</a>
-        </div>
-      </div>
-    </div>
-  </div>
 </section>
 
 
@@ -892,8 +906,8 @@
                             </ul>
                         </div>
                         <div class="shop-button">
-                            <a href="shop-details.html" class="theme-btn"><i
-                                    class="fa-solid fa-basket-shopping"></i> Add To Cart</a>
+                            <a href="shop-details.html" class="theme-btn"><i class="fa-solid fa-basket-shopping"></i>
+                                Add To Cart</a>
                         </div>
                     </div>
                 </div>
@@ -943,8 +957,8 @@
                             </ul>
                         </div>
                         <div class="shop-button">
-                            <a href="shop-details.html" class="theme-btn"><i
-                                    class="fa-solid fa-basket-shopping"></i> Add To Cart</a>
+                            <a href="shop-details.html" class="theme-btn"><i class="fa-solid fa-basket-shopping"></i>
+                                Add To Cart</a>
                         </div>
                     </div>
                 </div>
@@ -994,8 +1008,8 @@
                             </ul>
                         </div>
                         <div class="shop-button">
-                            <a href="shop-details.html" class="theme-btn"><i
-                                    class="fa-solid fa-basket-shopping"></i> Add To Cart</a>
+                            <a href="shop-details.html" class="theme-btn"><i class="fa-solid fa-basket-shopping"></i>
+                                Add To Cart</a>
                         </div>
                     </div>
                 </div>
@@ -1050,8 +1064,8 @@
                             </ul>
                         </div>
                         <div class="shop-button">
-                            <a href="shop-details.html" class="theme-btn"><i
-                                    class="fa-solid fa-basket-shopping"></i> Add To Cart</a>
+                            <a href="shop-details.html" class="theme-btn"><i class="fa-solid fa-basket-shopping"></i>
+                                Add To Cart</a>
                         </div>
                     </div>
                 </div>
@@ -1101,8 +1115,8 @@
                             </ul>
                         </div>
                         <div class="shop-button">
-                            <a href="shop-details.html" class="theme-btn"><i
-                                    class="fa-solid fa-basket-shopping"></i> Add To Cart</a>
+                            <a href="shop-details.html" class="theme-btn"><i class="fa-solid fa-basket-shopping"></i>
+                                Add To Cart</a>
                         </div>
                     </div>
                 </div>

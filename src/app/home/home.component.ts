@@ -1,34 +1,38 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { ProductService } from '../product.service';
+import { LecturaService } from '../core/service/lectura.service';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [RouterLink, CommonModule],
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
   products: any[] = [];
   showMore: boolean = false; // Controla si se muestran más de 4 productos
 
-  constructor(private productService: ProductService) {}
+  constructor(
+    private LecturaService: LecturaService,
+    private routeres: Router
+  ) {}
 
   ngOnInit() {
-    this.productService.getProducts().subscribe(
-      (data) => {
-        this.products = data;
-        console.log('Products:', this.products);
+    this.LecturaService.getPromocionDiario().subscribe({
+      next: (lst: any) => {
+        this.products = lst;
+        console.log(this.products);
       },
-      (error) => {
+      error: (error: any) => {
         console.error('Error fetching products', error);
       },
-      () => {
+      complete() {
         console.log('Product fetching completed');
-      }
-    );
+      },
+    });
   }
 
   toggleShowMore() {

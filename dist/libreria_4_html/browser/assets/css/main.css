@@ -2,10 +2,10 @@
 Theme Name: Bookle
 Author: Gramentheme
 Author URI: https://themeforest.net/user/gramentheme
-Description: Bookle - Book Store WooCommerce Html Template 
+Description: Bookle - Book Store WooCommerce Html Template
 Version: 1.0.0
 */
-/*  CSS Index Here  
+/*  CSS Index Here
 
 *** Mixins
 *** Variables
@@ -28,7 +28,7 @@ Version: 1.0.0
 *** Section
 *** Shop
 *** Team
-*** Testimonial   
+*** Testimonial
 
 /*CSS Table Of Content Ends Here*/
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Moon+Dance&display=swap");
@@ -2178,11 +2178,11 @@ span {
   position: absolute;
   top: -1%;
   left: -3%;
-  width: 458px;
+  width: 470px;
   height: 177px;
   z-index: 2;
   border-radius: 0px 100px 0px 0px;
-  background-color: var(--header);
+  background-color: transparent;
   -webkit-border-radius: 0px 100px 0px 0px;
   -moz-border-radius: 0px 100px 0px 0px;
   -ms-border-radius: 0px 100px 0px 0px;
@@ -2220,7 +2220,7 @@ span {
   height: 177px;
   z-index: 1;
   border-radius: 0px 100px 0px 0px;
-  background: var(--white);
+  background: transparent;
   -webkit-border-radius: 0px 100px 0px 0px;
   -moz-border-radius: 0px 100px 0px 0px;
   -ms-border-radius: 0px 100px 0px 0px;
@@ -2939,12 +2939,13 @@ span {
   height: 119px;
   z-index: 2;
   border-radius: 0px 100px 0px 0px;
-  background-color: var(--header);
+  background-color: transparent;
   -webkit-border-radius: 0px 100px 0px 0px;
   -moz-border-radius: 0px 100px 0px 0px;
   -ms-border-radius: 0px 100px 0px 0px;
   -o-border-radius: 0px 100px 0px 0px;
 }
+
 @media (max-width: 1600px) {
   .sticky-header .header-main:before {
     width: 290px;
@@ -2977,7 +2978,7 @@ span {
   height: 119px;
   z-index: 1;
   border-radius: 0px 100px 0px 0px;
-  background: var(--white);
+  background: transparent;
   -webkit-border-radius: 0px 100px 0px 0px;
   -moz-border-radius: 0px 100px 0px 0px;
   -ms-border-radius: 0px 100px 0px 0px;

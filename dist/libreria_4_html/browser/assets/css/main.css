@@ -1860,7 +1860,7 @@ span {
   position: relative;
   list-style: none;
   display: inline-block;
-  margin-inline-end: 40px;
+  margin-inline-end: 20px;
   padding: 28px 0;
 }
 @media (max-width: 1600px) {
@@ -3014,7 +3014,7 @@ span {
   position: relative;
   list-style: none;
   display: inline-block;
-  margin-inline-end: 40px;
+  margin-inline-end: 20px;
   padding: 28px 0;
 }
 @media (max-width: 1600px) {

@@ -48,7 +48,7 @@
 </div>
 
 <!-- Feature Section start  -->
-<section class="feature-section fix section-padding">
+<!-- <section class="feature-section fix section-padding">
     <div class="container">
         <div class="feature-wrapper">
             <div class="feature-box-items wow fadeInUp" data-wow-delay=".2s">
@@ -89,7 +89,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 
 
@@ -100,10 +100,10 @@
     <div class="container">
         <div class="section-title-area">
             <div class="section-title">
-                <h2>Featured Books</h2>
+                <h2>Novedades</h2>
             </div>
             <button (click)="toggleShowMore()" class="theme-btn transparent-btn">
-                {{ showMore ? 'Show Less' : 'Explore More' }} <i class="fa-solid fa-arrow-right-long"></i>
+                {{ showMore ? 'Show Less' : 'Descubra más' }} <i class="fa-solid fa-arrow-right-long"></i>
             </button>
         </div>
         <div class="book-shop-wrapper">
@@ -114,10 +114,10 @@
                     </a>
                     <ul class="post-box">
                         <li>
-                            Hot
+                            Nuevo
                         </li>
                         <li>
-                            -30%
+                            -15%
                         </li>
                     </ul>
                     <ul class="shop-icon d-grid justify-content-center align-items-center">
@@ -161,11 +161,11 @@
 
 
 <!-- Book Catagories Section start  -->
-<section class="book-catagories-section fix section-padding">
+<!-- <section class="book-catagories-section fix section-padding">
     <div class="container">
         <div class="book-catagories-wrapper">
             <div class="section-title text-center">
-                <h2 class="wow fadeInUp" data-wow-delay=".3s">Top Categories Book</h2>
+                <h2 class="wow fadeInUp" data-wow-delay=".3s">Topo Categories Book</h2>
             </div>
             <div class="array-button">
                 <button class="array-prev"><i class="fal fa-arrow-left"></i></button>
@@ -237,14 +237,14 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 <!-- Shop Section start  -->
-<section class="shop-section section-padding fix">
+<!-- <section class="shop-section section-padding fix">
     <div class="container">
         <div class="section-title-area">
             <div class="section-title mb- wow fadeInUp" data-wow-delay=".3s">
-                <h2>Bookle Top Books</h2>
+                <h2>Las artes</h2>
             </div>
             <a href="shop.html" class="theme-btn transparent-btn wow fadeInUp" data-wow-delay=".5s">Explore More <i
                     class="fa-solid fa-arrow-right-long"></i></a>
@@ -476,10 +476,1227 @@
             </div>
         </div>
     </div>
+</section> -->
+
+<!-- Book  FICCION  -->
+<section class="shop-section section-padding fix pt-0">
+  <div class="container">
+      <div class="section-title-area">
+          <div class="section-title">
+              <h2>Ficción</h2>
+          </div>
+          <button (click)="toggleShowMore()" class="theme-btn transparent-btn">
+              {{ showMore ? 'Show Less' : 'Descubra más' }} <i class="fa-solid fa-arrow-right-long"></i>
+          </button>
+      </div>
+      <div class="book-shop-wrapper">
+          <div class="shop-box-items style-2" *ngFor="let product of (showMore ? products : products | slice:0:5)">
+              <div class="book-thumb center">
+                  <a [routerLink]="['/detail-book', product.id]" routerLinkActive="active" ariaCurrentWhenActive="page">
+                      <img [src]="product.imagen_tapa" alt="{{ product.titulo }}">
+                  </a>
+                  <!-- <ul class="post-box">
+                      <li>
+                          Nuevo
+                      </li>
+                      <li>
+                          -15%
+                      </li>
+                  </ul> -->
+                  <ul class="shop-icon d-grid justify-content-center align-items-center">
+                      <li>
+                          <a><i class="far fa-heart"></i></a>
+                      </li>
+                      <li>
+                          <a>
+                              <img class="icon" src="assets/img/icon/shuffle.svg" alt="svg-icon">
+                          </a>
+                      </li>
+                      <li>
+                          <a><i class="far fa-eye"></i></a>
+                      </li>
+                  </ul>
+              </div>
+              <div class="shop-content">
+                  <h5>{{ product.autor }}</h5>
+                  <h3><a [routerLink]="['/detail-book', product.id]" routerLinkActive="active" ariaCurrentWhenActive="page">{{ product.titulo }}</a></h3>
+                  <ul class="price-list">
+                      <li>S/. {{ product.pvp }}</li>
+                  </ul>
+                  <ul class="author-post">
+                      <li class="authot-list">
+                          <span class="content">{{product.pais_edicion}}</span>
+                          <span class="content">{{ product.editor }}</span>
+                      </li>
+                      <li class="star">
+                      </li>
+                  </ul>
+              </div>
+              <div class="shop-button">
+                  <a href="shop-details.html" class="theme-btn"><i class="fa-solid fa-basket-shopping"></i> Add To
+                      Cart</a>
+              </div>
+          </div>
+      </div>
+  </div>
 </section>
 
+<!-- Book Literatura y estudios literarios  -->
+<section class="shop-section section-padding fix pt-0">
+  <div class="container">
+      <div class="section-title-area">
+          <div class="section-title">
+              <h2>Literatura y estudios literarios</h2>
+          </div>
+          <button (click)="toggleShowMore()" class="theme-btn transparent-btn">
+              {{ showMore ? 'Show Less' : 'Descubra más' }} <i class="fa-solid fa-arrow-right-long"></i>
+          </button>
+      </div>
+      <div class="book-shop-wrapper">
+          <div class="shop-box-items style-2" *ngFor="let product of (showMore ? products : products | slice:0:5)">
+              <div class="book-thumb center">
+                  <a [routerLink]="['/detail-book', product.id]" routerLinkActive="active" ariaCurrentWhenActive="page">
+                      <img [src]="product.imagen_tapa" alt="{{ product.titulo }}">
+                  </a>
+                  <!-- <ul class="post-box">
+                      <li>
+                          Nuevo
+                      </li>
+                      <li>
+                          -15%
+                      </li>
+                  </ul> -->
+                  <ul class="shop-icon d-grid justify-content-center align-items-center">
+                      <li>
+                          <a><i class="far fa-heart"></i></a>
+                      </li>
+                      <li>
+                          <a>
+                              <img class="icon" src="assets/img/icon/shuffle.svg" alt="svg-icon">
+                          </a>
+                      </li>
+                      <li>
+                          <a><i class="far fa-eye"></i></a>
+                      </li>
+                  </ul>
+              </div>
+              <div class="shop-content">
+                  <h5>{{ product.autor }}</h5>
+                  <h3><a [routerLink]="['/detail-book', product.id]" routerLinkActive="active" ariaCurrentWhenActive="page">{{ product.titulo }}</a></h3>
+                  <ul class="price-list">
+                      <li>S/. {{ product.pvp }}</li>
+                  </ul>
+                  <ul class="author-post">
+                      <li class="authot-list">
+                          <span class="content">{{product.pais_edicion}}</span>
+                          <span class="content">{{ product.editor }}</span>
+                      </li>
+                      <li class="star">
+                      </li>
+                  </ul>
+              </div>
+              <div class="shop-button">
+                  <a href="shop-details.html" class="theme-btn"><i class="fa-solid fa-basket-shopping"></i> Add To
+                      Cart</a>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<!-- Book Infantiles, juveniles y didácticos  -->
+<section class="shop-section section-padding fix pt-0">
+  <div class="container">
+      <div class="section-title-area">
+          <div class="section-title">
+              <h2>Infantiles, juveniles y didácticos</h2>
+          </div>
+          <button (click)="toggleShowMore()" class="theme-btn transparent-btn">
+              {{ showMore ? 'Show Less' : 'Descubra más' }} <i class="fa-solid fa-arrow-right-long"></i>
+          </button>
+      </div>
+      <div class="book-shop-wrapper">
+          <div class="shop-box-items style-2" *ngFor="let product of (showMore ? products : products | slice:0:5)">
+              <div class="book-thumb center">
+                  <a [routerLink]="['/detail-book', product.id]" routerLinkActive="active" ariaCurrentWhenActive="page">
+                      <img [src]="product.imagen_tapa" alt="{{ product.titulo }}">
+                  </a>
+                  <!-- <ul class="post-box">
+                      <li>
+                          Nuevo
+                      </li>
+                      <li>
+                          -15%
+                      </li>
+                  </ul> -->
+                  <ul class="shop-icon d-grid justify-content-center align-items-center">
+                      <li>
+                          <a><i class="far fa-heart"></i></a>
+                      </li>
+                      <li>
+                          <a>
+                              <img class="icon" src="assets/img/icon/shuffle.svg" alt="svg-icon">
+                          </a>
+                      </li>
+                      <li>
+                          <a><i class="far fa-eye"></i></a>
+                      </li>
+                  </ul>
+              </div>
+              <div class="shop-content">
+                  <h5>{{ product.autor }}</h5>
+                  <h3><a [routerLink]="['/detail-book', product.id]" routerLinkActive="active" ariaCurrentWhenActive="page">{{ product.titulo }}</a></h3>
+                  <ul class="price-list">
+                      <li>S/. {{ product.pvp }}</li>
+                  </ul>
+                  <ul class="author-post">
+                      <li class="authot-list">
+                          <span class="content">{{product.pais_edicion}}</span>
+                          <span class="content">{{ product.editor }}</span>
+                      </li>
+                      <li class="star">
+                      </li>
+                  </ul>
+              </div>
+              <div class="shop-button">
+                  <a href="shop-details.html" class="theme-btn"><i class="fa-solid fa-basket-shopping"></i> Add To
+                      Cart</a>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<!-- Book Las artes  -->
+<section class="shop-section section-padding fix pt-0">
+  <div class="container">
+      <div class="section-title-area">
+          <div class="section-title">
+              <h2>Las artes</h2>
+          </div>
+          <button (click)="toggleShowMore()" class="theme-btn transparent-btn">
+              {{ showMore ? 'Show Less' : 'Descubra más' }} <i class="fa-solid fa-arrow-right-long"></i>
+          </button>
+      </div>
+      <div class="book-shop-wrapper">
+          <div class="shop-box-items style-2" *ngFor="let product of (showMore ? products : products | slice:0:5)">
+              <div class="book-thumb center">
+                  <a [routerLink]="['/detail-book', product.id]" routerLinkActive="active" ariaCurrentWhenActive="page">
+                      <img [src]="product.imagen_tapa" alt="{{ product.titulo }}">
+                  </a>
+                  <!-- <ul class="post-box">
+                      <li>
+                          Nuevo
+                      </li>
+                      <li>
+                          -15%
+                      </li>
+                  </ul> -->
+                  <ul class="shop-icon d-grid justify-content-center align-items-center">
+                      <li>
+                          <a><i class="far fa-heart"></i></a>
+                      </li>
+                      <li>
+                          <a>
+                              <img class="icon" src="assets/img/icon/shuffle.svg" alt="svg-icon">
+                          </a>
+                      </li>
+                      <li>
+                          <a><i class="far fa-eye"></i></a>
+                      </li>
+                  </ul>
+              </div>
+              <div class="shop-content">
+                  <h5>{{ product.autor }}</h5>
+                  <h3><a [routerLink]="['/detail-book', product.id]" routerLinkActive="active" ariaCurrentWhenActive="page">{{ product.titulo }}</a></h3>
+                  <ul class="price-list">
+                      <li>S/. {{ product.pvp }}</li>
+                  </ul>
+                  <ul class="author-post">
+                      <li class="authot-list">
+                          <span class="content">{{product.pais_edicion}}</span>
+                          <span class="content">{{ product.editor }}</span>
+                      </li>
+                      <li class="star">
+                      </li>
+                  </ul>
+              </div>
+              <div class="shop-button">
+                  <a href="shop-details.html" class="theme-btn"><i class="fa-solid fa-basket-shopping"></i> Add To
+                      Cart</a>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<!-- Book Biografía e historias reales  -->
+<section class="shop-section section-padding fix pt-0">
+  <div class="container">
+      <div class="section-title-area">
+          <div class="section-title">
+              <h2>Biografía e historias reales</h2>
+          </div>
+          <button (click)="toggleShowMore()" class="theme-btn transparent-btn">
+              {{ showMore ? 'Show Less' : 'Descubra más' }} <i class="fa-solid fa-arrow-right-long"></i>
+          </button>
+      </div>
+      <div class="book-shop-wrapper">
+          <div class="shop-box-items style-2" *ngFor="let product of (showMore ? products : products | slice:0:5)">
+              <div class="book-thumb center">
+                  <a [routerLink]="['/detail-book', product.id]" routerLinkActive="active" ariaCurrentWhenActive="page">
+                      <img [src]="product.imagen_tapa" alt="{{ product.titulo }}">
+                  </a>
+                  <!-- <ul class="post-box">
+                      <li>
+                          Nuevo
+                      </li>
+                      <li>
+                          -15%
+                      </li>
+                  </ul> -->
+                  <ul class="shop-icon d-grid justify-content-center align-items-center">
+                      <li>
+                          <a><i class="far fa-heart"></i></a>
+                      </li>
+                      <li>
+                          <a>
+                              <img class="icon" src="assets/img/icon/shuffle.svg" alt="svg-icon">
+                          </a>
+                      </li>
+                      <li>
+                          <a><i class="far fa-eye"></i></a>
+                      </li>
+                  </ul>
+              </div>
+              <div class="shop-content">
+                  <h5>{{ product.autor }}</h5>
+                  <h3><a [routerLink]="['/detail-book', product.id]" routerLinkActive="active" ariaCurrentWhenActive="page">{{ product.titulo }}</a></h3>
+                  <ul class="price-list">
+                      <li>S/. {{ product.pvp }}</li>
+                  </ul>
+                  <ul class="author-post">
+                      <li class="authot-list">
+                          <span class="content">{{product.pais_edicion}}</span>
+                          <span class="content">{{ product.editor }}</span>
+                      </li>
+                      <li class="star">
+                      </li>
+                  </ul>
+              </div>
+              <div class="shop-button">
+                  <a href="shop-details.html" class="theme-btn"><i class="fa-solid fa-basket-shopping"></i> Add To
+                      Cart</a>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+<!-- Book Sociedad y ciencias sociale  -->
+<section class="shop-section section-padding fix pt-0">
+  <div class="container">
+      <div class="section-title-area">
+          <div class="section-title">
+              <h2>Sociedad y ciencias sociales</h2>
+          </div>
+          <button (click)="toggleShowMore()" class="theme-btn transparent-btn">
+              {{ showMore ? 'Show Less' : 'Descubra más' }} <i class="fa-solid fa-arrow-right-long"></i>
+          </button>
+      </div>
+      <div class="book-shop-wrapper">
+          <div class="shop-box-items style-2" *ngFor="let product of (showMore ? products : products | slice:0:5)">
+              <div class="book-thumb center">
+                  <a [routerLink]="['/detail-book', product.id]" routerLinkActive="active" ariaCurrentWhenActive="page">
+                      <img [src]="product.imagen_tapa" alt="{{ product.titulo }}">
+                  </a>
+                  <!-- <ul class="post-box">
+                      <li>
+                          Nuevo
+                      </li>
+                      <li>
+                          -15%
+                      </li>
+                  </ul> -->
+                  <ul class="shop-icon d-grid justify-content-center align-items-center">
+                      <li>
+                          <a><i class="far fa-heart"></i></a>
+                      </li>
+                      <li>
+                          <a>
+                              <img class="icon" src="assets/img/icon/shuffle.svg" alt="svg-icon">
+                          </a>
+                      </li>
+                      <li>
+                          <a><i class="far fa-eye"></i></a>
+                      </li>
+                  </ul>
+              </div>
+              <div class="shop-content">
+                  <h5>{{ product.autor }}</h5>
+                  <h3><a [routerLink]="['/detail-book', product.id]" routerLinkActive="active" ariaCurrentWhenActive="page">{{ product.titulo }}</a></h3>
+                  <ul class="price-list">
+                      <li>S/. {{ product.pvp }}</li>
+                  </ul>
+                  <ul class="author-post">
+                      <li class="authot-list">
+                          <span class="content">{{product.pais_edicion}}</span>
+                          <span class="content">{{ product.editor }}</span>
+                      </li>
+                      <li class="star">
+                      </li>
+                  </ul>
+              </div>
+              <div class="shop-button">
+                  <a href="shop-details.html" class="theme-btn"><i class="fa-solid fa-basket-shopping"></i> Add To
+                      Cart</a>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+<!-- Book Economía, finanzas, empresa y gestión  -->
+<section class="shop-section section-padding fix pt-0">
+  <div class="container">
+      <div class="section-title-area">
+          <div class="section-title">
+              <h2>Economía, finanzas, empresa y gestión</h2>
+          </div>
+          <button (click)="toggleShowMore()" class="theme-btn transparent-btn">
+              {{ showMore ? 'Show Less' : 'Descubra más' }} <i class="fa-solid fa-arrow-right-long"></i>
+          </button>
+      </div>
+      <div class="book-shop-wrapper">
+          <div class="shop-box-items style-2" *ngFor="let product of (showMore ? products : products | slice:0:5)">
+              <div class="book-thumb center">
+                  <a [routerLink]="['/detail-book', product.id]" routerLinkActive="active" ariaCurrentWhenActive="page">
+                      <img [src]="product.imagen_tapa" alt="{{ product.titulo }}">
+                  </a>
+                  <!-- <ul class="post-box">
+                      <li>
+                          Nuevo
+                      </li>
+                      <li>
+                          -15%
+                      </li>
+                  </ul> -->
+                  <ul class="shop-icon d-grid justify-content-center align-items-center">
+                      <li>
+                          <a><i class="far fa-heart"></i></a>
+                      </li>
+                      <li>
+                          <a>
+                              <img class="icon" src="assets/img/icon/shuffle.svg" alt="svg-icon">
+                          </a>
+                      </li>
+                      <li>
+                          <a><i class="far fa-eye"></i></a>
+                      </li>
+                  </ul>
+              </div>
+              <div class="shop-content">
+                  <h5>{{ product.autor }}</h5>
+                  <h3><a [routerLink]="['/detail-book', product.id]" routerLinkActive="active" ariaCurrentWhenActive="page">{{ product.titulo }}</a></h3>
+                  <ul class="price-list">
+                      <li>S/. {{ product.pvp }}</li>
+                  </ul>
+                  <ul class="author-post">
+                      <li class="authot-list">
+                          <span class="content">{{product.pais_edicion}}</span>
+                          <span class="content">{{ product.editor }}</span>
+                      </li>
+                      <li class="star">
+                      </li>
+                  </ul>
+              </div>
+              <div class="shop-button">
+                  <a href="shop-details.html" class="theme-btn"><i class="fa-solid fa-basket-shopping"></i> Add To
+                      Cart</a>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+<!-- Book Salud y desarrollo personal  -->
+<section class="shop-section section-padding fix pt-0">
+  <div class="container">
+      <div class="section-title-area">
+          <div class="section-title">
+              <h2>Salud y desarrollo personal</h2>
+          </div>
+          <button (click)="toggleShowMore()" class="theme-btn transparent-btn">
+              {{ showMore ? 'Show Less' : 'Descubra más' }} <i class="fa-solid fa-arrow-right-long"></i>
+          </button>
+      </div>
+      <div class="book-shop-wrapper">
+          <div class="shop-box-items style-2" *ngFor="let product of (showMore ? products : products | slice:0:5)">
+              <div class="book-thumb center">
+                  <a [routerLink]="['/detail-book', product.id]" routerLinkActive="active" ariaCurrentWhenActive="page">
+                      <img [src]="product.imagen_tapa" alt="{{ product.titulo }}">
+                  </a>
+                  <!-- <ul class="post-box">
+                      <li>
+                          Nuevo
+                      </li>
+                      <li>
+                          -15%
+                      </li>
+                  </ul> -->
+                  <ul class="shop-icon d-grid justify-content-center align-items-center">
+                      <li>
+                          <a><i class="far fa-heart"></i></a>
+                      </li>
+                      <li>
+                          <a>
+                              <img class="icon" src="assets/img/icon/shuffle.svg" alt="svg-icon">
+                          </a>
+                      </li>
+                      <li>
+                          <a><i class="far fa-eye"></i></a>
+                      </li>
+                  </ul>
+              </div>
+              <div class="shop-content">
+                  <h5>{{ product.autor }}</h5>
+                  <h3><a [routerLink]="['/detail-book', product.id]" routerLinkActive="active" ariaCurrentWhenActive="page">{{ product.titulo }}</a></h3>
+                  <ul class="price-list">
+                      <li>S/. {{ product.pvp }}</li>
+                  </ul>
+                  <ul class="author-post">
+                      <li class="authot-list">
+                          <span class="content">{{product.pais_edicion}}</span>
+                          <span class="content">{{ product.editor }}</span>
+                      </li>
+                      <li class="star">
+                      </li>
+                  </ul>
+              </div>
+              <div class="shop-button">
+                  <a href="shop-details.html" class="theme-btn"><i class="fa-solid fa-basket-shopping"></i> Add To
+                      Cart</a>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+<!-- Book Estilo de vida, deporte y ocio  -->
+<section class="shop-section section-padding fix pt-0">
+  <div class="container">
+      <div class="section-title-area">
+          <div class="section-title">
+              <h2>Estilo de vida, deporte y ocio</h2>
+          </div>
+          <button (click)="toggleShowMore()" class="theme-btn transparent-btn">
+              {{ showMore ? 'Show Less' : 'Descubra más' }} <i class="fa-solid fa-arrow-right-long"></i>
+          </button>
+      </div>
+      <div class="book-shop-wrapper">
+          <div class="shop-box-items style-2" *ngFor="let product of (showMore ? products : products | slice:0:5)">
+              <div class="book-thumb center">
+                  <a [routerLink]="['/detail-book', product.id]" routerLinkActive="active" ariaCurrentWhenActive="page">
+                      <img [src]="product.imagen_tapa" alt="{{ product.titulo }}">
+                  </a>
+                  <!-- <ul class="post-box">
+                      <li>
+                          Nuevo
+                      </li>
+                      <li>
+                          -15%
+                      </li>
+                  </ul> -->
+                  <ul class="shop-icon d-grid justify-content-center align-items-center">
+                      <li>
+                          <a><i class="far fa-heart"></i></a>
+                      </li>
+                      <li>
+                          <a>
+                              <img class="icon" src="assets/img/icon/shuffle.svg" alt="svg-icon">
+                          </a>
+                      </li>
+                      <li>
+                          <a><i class="far fa-eye"></i></a>
+                      </li>
+                  </ul>
+              </div>
+              <div class="shop-content">
+                  <h5>{{ product.autor }}</h5>
+                  <h3><a [routerLink]="['/detail-book', product.id]" routerLinkActive="active" ariaCurrentWhenActive="page">{{ product.titulo }}</a></h3>
+                  <ul class="price-list">
+                      <li>S/. {{ product.pvp }}</li>
+                  </ul>
+                  <ul class="author-post">
+                      <li class="authot-list">
+                          <span class="content">{{product.pais_edicion}}</span>
+                          <span class="content">{{ product.editor }}</span>
+                      </li>
+                      <li class="star">
+                      </li>
+                  </ul>
+              </div>
+              <div class="shop-button">
+                  <a href="shop-details.html" class="theme-btn"><i class="fa-solid fa-basket-shopping"></i> Add To
+                      Cart</a>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+<!-- Book Ciencias de la tierra, geografía, medioambiente, planificación  -->
+<section class="shop-section section-padding fix pt-0">
+  <div class="container">
+      <div class="section-title-area">
+          <div class="section-title">
+              <h2>Ciencias de la tierra, geografía, medioambiente, planificación</h2>
+          </div>
+          <button (click)="toggleShowMore()" class="theme-btn transparent-btn">
+              {{ showMore ? 'Show Less' : 'Descubra más' }} <i class="fa-solid fa-arrow-right-long"></i>
+          </button>
+      </div>
+      <div class="book-shop-wrapper">
+          <div class="shop-box-items style-2" *ngFor="let product of (showMore ? products : products | slice:0:5)">
+              <div class="book-thumb center">
+                  <a [routerLink]="['/detail-book', product.id]" routerLinkActive="active" ariaCurrentWhenActive="page">
+                      <img [src]="product.imagen_tapa" alt="{{ product.titulo }}">
+                  </a>
+                  <!-- <ul class="post-box">
+                      <li>
+                          Nuevo
+                      </li>
+                      <li>
+                          -15%
+                      </li>
+                  </ul> -->
+                  <ul class="shop-icon d-grid justify-content-center align-items-center">
+                      <li>
+                          <a><i class="far fa-heart"></i></a>
+                      </li>
+                      <li>
+                          <a>
+                              <img class="icon" src="assets/img/icon/shuffle.svg" alt="svg-icon">
+                          </a>
+                      </li>
+                      <li>
+                          <a><i class="far fa-eye"></i></a>
+                      </li>
+                  </ul>
+              </div>
+              <div class="shop-content">
+                  <h5>{{ product.autor }}</h5>
+                  <h3><a [routerLink]="['/detail-book', product.id]" routerLinkActive="active" ariaCurrentWhenActive="page">{{ product.titulo }}</a></h3>
+                  <ul class="price-list">
+                      <li>S/. {{ product.pvp }}</li>
+                  </ul>
+                  <ul class="author-post">
+                      <li class="authot-list">
+                          <span class="content">{{product.pais_edicion}}</span>
+                          <span class="content">{{ product.editor }}</span>
+                      </li>
+                      <li class="star">
+                      </li>
+                  </ul>
+              </div>
+              <div class="shop-button">
+                  <a href="shop-details.html" class="theme-btn"><i class="fa-solid fa-basket-shopping"></i> Add To
+                      Cart</a>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+<!-- Book Humanidades  -->
+<section class="shop-section section-padding fix pt-0">
+  <div class="container">
+      <div class="section-title-area">
+          <div class="section-title">
+              <h2>Humanidades</h2>
+          </div>
+          <button (click)="toggleShowMore()" class="theme-btn transparent-btn">
+              {{ showMore ? 'Show Less' : 'Descubra más' }} <i class="fa-solid fa-arrow-right-long"></i>
+          </button>
+      </div>
+      <div class="book-shop-wrapper">
+          <div class="shop-box-items style-2" *ngFor="let product of (showMore ? products : products | slice:0:5)">
+              <div class="book-thumb center">
+                  <a [routerLink]="['/detail-book', product.id]" routerLinkActive="active" ariaCurrentWhenActive="page">
+                      <img [src]="product.imagen_tapa" alt="{{ product.titulo }}">
+                  </a>
+                  <!-- <ul class="post-box">
+                      <li>
+                          Nuevo
+                      </li>
+                      <li>
+                          -15%
+                      </li>
+                  </ul> -->
+                  <ul class="shop-icon d-grid justify-content-center align-items-center">
+                      <li>
+                          <a><i class="far fa-heart"></i></a>
+                      </li>
+                      <li>
+                          <a>
+                              <img class="icon" src="assets/img/icon/shuffle.svg" alt="svg-icon">
+                          </a>
+                      </li>
+                      <li>
+                          <a><i class="far fa-eye"></i></a>
+                      </li>
+                  </ul>
+              </div>
+              <div class="shop-content">
+                  <h5>{{ product.autor }}</h5>
+                  <h3><a [routerLink]="['/detail-book', product.id]" routerLinkActive="active" ariaCurrentWhenActive="page">{{ product.titulo }}</a></h3>
+                  <ul class="price-list">
+                      <li>S/. {{ product.pvp }}</li>
+                  </ul>
+                  <ul class="author-post">
+                      <li class="authot-list">
+                          <span class="content">{{product.pais_edicion}}</span>
+                          <span class="content">{{ product.editor }}</span>
+                      </li>
+                      <li class="star">
+                      </li>
+                  </ul>
+              </div>
+              <div class="shop-button">
+                  <a href="shop-details.html" class="theme-btn"><i class="fa-solid fa-basket-shopping"></i> Add To
+                      Cart</a>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+<!-- Book Lenguaje  -->
+<section class="shop-section section-padding fix pt-0">
+  <div class="container">
+      <div class="section-title-area">
+          <div class="section-title">
+              <h2>Lenguaje</h2>
+          </div>
+          <button (click)="toggleShowMore()" class="theme-btn transparent-btn">
+              {{ showMore ? 'Show Less' : 'Descubra más' }} <i class="fa-solid fa-arrow-right-long"></i>
+          </button>
+      </div>
+      <div class="book-shop-wrapper">
+          <div class="shop-box-items style-2" *ngFor="let product of (showMore ? products : products | slice:0:5)">
+              <div class="book-thumb center">
+                  <a [routerLink]="['/detail-book', product.id]" routerLinkActive="active" ariaCurrentWhenActive="page">
+                      <img [src]="product.imagen_tapa" alt="{{ product.titulo }}">
+                  </a>
+                  <!-- <ul class="post-box">
+                      <li>
+                          Nuevo
+                      </li>
+                      <li>
+                          -15%
+                      </li>
+                  </ul> -->
+                  <ul class="shop-icon d-grid justify-content-center align-items-center">
+                      <li>
+                          <a><i class="far fa-heart"></i></a>
+                      </li>
+                      <li>
+                          <a>
+                              <img class="icon" src="assets/img/icon/shuffle.svg" alt="svg-icon">
+                          </a>
+                      </li>
+                      <li>
+                          <a><i class="far fa-eye"></i></a>
+                      </li>
+                  </ul>
+              </div>
+              <div class="shop-content">
+                  <h5>{{ product.autor }}</h5>
+                  <h3><a [routerLink]="['/detail-book', product.id]" routerLinkActive="active" ariaCurrentWhenActive="page">{{ product.titulo }}</a></h3>
+                  <ul class="price-list">
+                      <li>S/. {{ product.pvp }}</li>
+                  </ul>
+                  <ul class="author-post">
+                      <li class="authot-list">
+                          <span class="content">{{product.pais_edicion}}</span>
+                          <span class="content">{{ product.editor }}</span>
+                      </li>
+                      <li class="star">
+                      </li>
+                  </ul>
+              </div>
+              <div class="shop-button">
+                  <a href="shop-details.html" class="theme-btn"><i class="fa-solid fa-basket-shopping"></i> Add To
+                      Cart</a>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+<!-- Book Computación e informática  -->
+<section class="shop-section section-padding fix pt-0">
+  <div class="container">
+      <div class="section-title-area">
+          <div class="section-title">
+              <h2>Computación e informática</h2>
+          </div>
+          <button (click)="toggleShowMore()" class="theme-btn transparent-btn">
+              {{ showMore ? 'Show Less' : 'Descubra más' }} <i class="fa-solid fa-arrow-right-long"></i>
+          </button>
+      </div>
+      <div class="book-shop-wrapper">
+          <div class="shop-box-items style-2" *ngFor="let product of (showMore ? products : products | slice:0:5)">
+              <div class="book-thumb center">
+                  <a [routerLink]="['/detail-book', product.id]" routerLinkActive="active" ariaCurrentWhenActive="page">
+                      <img [src]="product.imagen_tapa" alt="{{ product.titulo }}">
+                  </a>
+                  <!-- <ul class="post-box">
+                      <li>
+                          Nuevo
+                      </li>
+                      <li>
+                          -15%
+                      </li>
+                  </ul> -->
+                  <ul class="shop-icon d-grid justify-content-center align-items-center">
+                      <li>
+                          <a><i class="far fa-heart"></i></a>
+                      </li>
+                      <li>
+                          <a>
+                              <img class="icon" src="assets/img/icon/shuffle.svg" alt="svg-icon">
+                          </a>
+                      </li>
+                      <li>
+                          <a><i class="far fa-eye"></i></a>
+                      </li>
+                  </ul>
+              </div>
+              <div class="shop-content">
+                  <h5>{{ product.autor }}</h5>
+                  <h3><a [routerLink]="['/detail-book', product.id]" routerLinkActive="active" ariaCurrentWhenActive="page">{{ product.titulo }}</a></h3>
+                  <ul class="price-list">
+                      <li>S/. {{ product.pvp }}</li>
+                  </ul>
+                  <ul class="author-post">
+                      <li class="authot-list">
+                          <span class="content">{{product.pais_edicion}}</span>
+                          <span class="content">{{ product.editor }}</span>
+                      </li>
+                      <li class="star">
+                      </li>
+                  </ul>
+              </div>
+              <div class="shop-button">
+                  <a href="shop-details.html" class="theme-btn"><i class="fa-solid fa-basket-shopping"></i> Add To
+                      Cart</a>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+<!-- Book Tecnología, ingeniería, agricultura  -->
+<section class="shop-section section-padding fix pt-0">
+  <div class="container">
+      <div class="section-title-area">
+          <div class="section-title">
+              <h2>Tecnología, ingeniería, agricultura</h2>
+          </div>
+          <button (click)="toggleShowMore()" class="theme-btn transparent-btn">
+              {{ showMore ? 'Show Less' : 'Descubra más' }} <i class="fa-solid fa-arrow-right-long"></i>
+          </button>
+      </div>
+      <div class="book-shop-wrapper">
+          <div class="shop-box-items style-2" *ngFor="let product of (showMore ? products : products | slice:0:5)">
+              <div class="book-thumb center">
+                  <a [routerLink]="['/detail-book', product.id]" routerLinkActive="active" ariaCurrentWhenActive="page">
+                      <img [src]="product.imagen_tapa" alt="{{ product.titulo }}">
+                  </a>
+                  <!-- <ul class="post-box">
+                      <li>
+                          Nuevo
+                      </li>
+                      <li>
+                          -15%
+                      </li>
+                  </ul> -->
+                  <ul class="shop-icon d-grid justify-content-center align-items-center">
+                      <li>
+                          <a><i class="far fa-heart"></i></a>
+                      </li>
+                      <li>
+                          <a>
+                              <img class="icon" src="assets/img/icon/shuffle.svg" alt="svg-icon">
+                          </a>
+                      </li>
+                      <li>
+                          <a><i class="far fa-eye"></i></a>
+                      </li>
+                  </ul>
+              </div>
+              <div class="shop-content">
+                  <h5>{{ product.autor }}</h5>
+                  <h3><a [routerLink]="['/detail-book', product.id]" routerLinkActive="active" ariaCurrentWhenActive="page">{{ product.titulo }}</a></h3>
+                  <ul class="price-list">
+                      <li>S/. {{ product.pvp }}</li>
+                  </ul>
+                  <ul class="author-post">
+                      <li class="authot-list">
+                          <span class="content">{{product.pais_edicion}}</span>
+                          <span class="content">{{ product.editor }}</span>
+                      </li>
+                      <li class="star">
+                      </li>
+                  </ul>
+              </div>
+              <div class="shop-button">
+                  <a href="shop-details.html" class="theme-btn"><i class="fa-solid fa-basket-shopping"></i> Add To
+                      Cart</a>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+<!-- Book Matemáticas y ciencia  -->
+<section class="shop-section section-padding fix pt-0">
+  <div class="container">
+      <div class="section-title-area">
+          <div class="section-title">
+              <h2> Matemáticas y ciencia</h2>
+          </div>
+          <button (click)="toggleShowMore()" class="theme-btn transparent-btn">
+              {{ showMore ? 'Show Less' : 'Descubra más' }} <i class="fa-solid fa-arrow-right-long"></i>
+          </button>
+      </div>
+      <div class="book-shop-wrapper">
+          <div class="shop-box-items style-2" *ngFor="let product of (showMore ? products : products | slice:0:5)">
+              <div class="book-thumb center">
+                  <a [routerLink]="['/detail-book', product.id]" routerLinkActive="active" ariaCurrentWhenActive="page">
+                      <img [src]="product.imagen_tapa" alt="{{ product.titulo }}">
+                  </a>
+                  <!-- <ul class="post-box">
+                      <li>
+                          Nuevo
+                      </li>
+                      <li>
+                          -15%
+                      </li>
+                  </ul> -->
+                  <ul class="shop-icon d-grid justify-content-center align-items-center">
+                      <li>
+                          <a><i class="far fa-heart"></i></a>
+                      </li>
+                      <li>
+                          <a>
+                              <img class="icon" src="assets/img/icon/shuffle.svg" alt="svg-icon">
+                          </a>
+                      </li>
+                      <li>
+                          <a><i class="far fa-eye"></i></a>
+                      </li>
+                  </ul>
+              </div>
+              <div class="shop-content">
+                  <h5>{{ product.autor }}</h5>
+                  <h3><a [routerLink]="['/detail-book', product.id]" routerLinkActive="active" ariaCurrentWhenActive="page">{{ product.titulo }}</a></h3>
+                  <ul class="price-list">
+                      <li>S/. {{ product.pvp }}</li>
+                  </ul>
+                  <ul class="author-post">
+                      <li class="authot-list">
+                          <span class="content">{{product.pais_edicion}}</span>
+                          <span class="content">{{ product.editor }}</span>
+                      </li>
+                      <li class="star">
+                      </li>
+                  </ul>
+              </div>
+              <div class="shop-button">
+                  <a href="shop-details.html" class="theme-btn"><i class="fa-solid fa-basket-shopping"></i> Add To
+                      Cart</a>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+<!-- Book Medicina  -->
+<section class="shop-section section-padding fix pt-0">
+  <div class="container">
+      <div class="section-title-area">
+          <div class="section-title">
+              <h2>Medicina</h2>
+          </div>
+          <button (click)="toggleShowMore()" class="theme-btn transparent-btn">
+              {{ showMore ? 'Show Less' : 'Descubra más' }} <i class="fa-solid fa-arrow-right-long"></i>
+          </button>
+      </div>
+      <div class="book-shop-wrapper">
+          <div class="shop-box-items style-2" *ngFor="let product of (showMore ? products : products | slice:0:5)">
+              <div class="book-thumb center">
+                  <a [routerLink]="['/detail-book', product.id]" routerLinkActive="active" ariaCurrentWhenActive="page">
+                      <img [src]="product.imagen_tapa" alt="{{ product.titulo }}">
+                  </a>
+                  <!-- <ul class="post-box">
+                      <li>
+                          Nuevo
+                      </li>
+                      <li>
+                          -15%
+                      </li>
+                  </ul> -->
+                  <ul class="shop-icon d-grid justify-content-center align-items-center">
+                      <li>
+                          <a><i class="far fa-heart"></i></a>
+                      </li>
+                      <li>
+                          <a>
+                              <img class="icon" src="assets/img/icon/shuffle.svg" alt="svg-icon">
+                          </a>
+                      </li>
+                      <li>
+                          <a><i class="far fa-eye"></i></a>
+                      </li>
+                  </ul>
+              </div>
+              <div class="shop-content">
+                  <h5>{{ product.autor }}</h5>
+                  <h3><a [routerLink]="['/detail-book', product.id]" routerLinkActive="active" ariaCurrentWhenActive="page">{{ product.titulo }}</a></h3>
+                  <ul class="price-list">
+                      <li>S/. {{ product.pvp }}</li>
+                  </ul>
+                  <ul class="author-post">
+                      <li class="authot-list">
+                          <span class="content">{{product.pais_edicion}}</span>
+                          <span class="content">{{ product.editor }}</span>
+                      </li>
+                      <li class="star">
+                      </li>
+                  </ul>
+              </div>
+              <div class="shop-button">
+                  <a href="shop-details.html" class="theme-btn"><i class="fa-solid fa-basket-shopping"></i> Add To
+                      Cart</a>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+<!-- Book Derecho  -->
+<section class="shop-section section-padding fix pt-0">
+  <div class="container">
+      <div class="section-title-area">
+          <div class="section-title">
+              <h2>Derecho</h2>
+          </div>
+          <button (click)="toggleShowMore()" class="theme-btn transparent-btn">
+              {{ showMore ? 'Show Less' : 'Descubra más' }} <i class="fa-solid fa-arrow-right-long"></i>
+          </button>
+      </div>
+      <div class="book-shop-wrapper">
+          <div class="shop-box-items style-2" *ngFor="let product of (showMore ? products : products | slice:0:5)">
+              <div class="book-thumb center">
+                  <a [routerLink]="['/detail-book', product.id]" routerLinkActive="active" ariaCurrentWhenActive="page">
+                      <img [src]="product.imagen_tapa" alt="{{ product.titulo }}">
+                  </a>
+                  <!-- <ul class="post-box">
+                      <li>
+                          Nuevo
+                      </li>
+                      <li>
+                          -15%
+                      </li>
+                  </ul> -->
+                  <ul class="shop-icon d-grid justify-content-center align-items-center">
+                      <li>
+                          <a><i class="far fa-heart"></i></a>
+                      </li>
+                      <li>
+                          <a>
+                              <img class="icon" src="assets/img/icon/shuffle.svg" alt="svg-icon">
+                          </a>
+                      </li>
+                      <li>
+                          <a><i class="far fa-eye"></i></a>
+                      </li>
+                  </ul>
+              </div>
+              <div class="shop-content">
+                  <h5>{{ product.autor }}</h5>
+                  <h3><a [routerLink]="['/detail-book', product.id]" routerLinkActive="active" ariaCurrentWhenActive="page">{{ product.titulo }}</a></h3>
+                  <ul class="price-list">
+                      <li>S/. {{ product.pvp }}</li>
+                  </ul>
+                  <ul class="author-post">
+                      <li class="authot-list">
+                          <span class="content">{{product.pais_edicion}}</span>
+                          <span class="content">{{ product.editor }}</span>
+                      </li>
+                      <li class="star">
+                      </li>
+                  </ul>
+              </div>
+              <div class="shop-button">
+                  <a href="shop-details.html" class="theme-btn"><i class="fa-solid fa-basket-shopping"></i> Add To
+                      Cart</a>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+<!-- Book Consulta, información y temas interdisciplinarios  -->
+<section class="shop-section section-padding fix pt-0">
+  <div class="container">
+      <div class="section-title-area">
+          <div class="section-title">
+              <h2>Consulta, información y temas interdisciplinarios</h2>
+          </div>
+          <button (click)="toggleShowMore()" class="theme-btn transparent-btn">
+              {{ showMore ? 'Show Less' : 'Descubra más' }} <i class="fa-solid fa-arrow-right-long"></i>
+          </button>
+      </div>
+      <div class="book-shop-wrapper">
+          <div class="shop-box-items style-2" *ngFor="let product of (showMore ? products : products | slice:0:5)">
+              <div class="book-thumb center">
+                  <a [routerLink]="['/detail-book', product.id]" routerLinkActive="active" ariaCurrentWhenActive="page">
+                      <img [src]="product.imagen_tapa" alt="{{ product.titulo }}">
+                  </a>
+                  <!-- <ul class="post-box">
+                      <li>
+                          Nuevo
+                      </li>
+                      <li>
+                          -15%
+                      </li>
+                  </ul> -->
+                  <ul class="shop-icon d-grid justify-content-center align-items-center">
+                      <li>
+                          <a><i class="far fa-heart"></i></a>
+                      </li>
+                      <li>
+                          <a>
+                              <img class="icon" src="assets/img/icon/shuffle.svg" alt="svg-icon">
+                          </a>
+                      </li>
+                      <li>
+                          <a><i class="far fa-eye"></i></a>
+                      </li>
+                  </ul>
+              </div>
+              <div class="shop-content">
+                  <h5>{{ product.autor }}</h5>
+                  <h3><a [routerLink]="['/detail-book', product.id]" routerLinkActive="active" ariaCurrentWhenActive="page">{{ product.titulo }}</a></h3>
+                  <ul class="price-list">
+                      <li>S/. {{ product.pvp }}</li>
+                  </ul>
+                  <ul class="author-post">
+                      <li class="authot-list">
+                          <span class="content">{{product.pais_edicion}}</span>
+                          <span class="content">{{ product.editor }}</span>
+                      </li>
+                      <li class="star">
+                      </li>
+                  </ul>
+              </div>
+              <div class="shop-button">
+                  <a href="shop-details.html" class="theme-btn"><i class="fa-solid fa-basket-shopping"></i> Add To
+                      Cart</a>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+<!-- Book Enseñanza de la lengua inglesa  -->
+<section class="shop-section section-padding fix pt-0">
+  <div class="container">
+      <div class="section-title-area">
+          <div class="section-title">
+              <h2>Enseñanza de la lengua inglesa</h2>
+          </div>
+          <button (click)="toggleShowMore()" class="theme-btn transparent-btn">
+              {{ showMore ? 'Show Less' : 'Descubra más' }} <i class="fa-solid fa-arrow-right-long"></i>
+          </button>
+      </div>
+      <div class="book-shop-wrapper">
+          <div class="shop-box-items style-2" *ngFor="let product of (showMore ? products : products | slice:0:5)">
+              <div class="book-thumb center">
+                  <a [routerLink]="['/detail-book', product.id]" routerLinkActive="active" ariaCurrentWhenActive="page">
+                      <img [src]="product.imagen_tapa" alt="{{ product.titulo }}">
+                  </a>
+                  <!-- <ul class="post-box">
+                      <li>
+                          Nuevo
+                      </li>
+                      <li>
+                          -15%
+                      </li>
+                  </ul> -->
+                  <ul class="shop-icon d-grid justify-content-center align-items-center">
+                      <li>
+                          <a><i class="far fa-heart"></i></a>
+                      </li>
+                      <li>
+                          <a>
+                              <img class="icon" src="assets/img/icon/shuffle.svg" alt="svg-icon">
+                          </a>
+                      </li>
+                      <li>
+                          <a><i class="far fa-eye"></i></a>
+                      </li>
+                  </ul>
+              </div>
+              <div class="shop-content">
+                  <h5>{{ product.autor }}</h5>
+                  <h3><a [routerLink]="['/detail-book', product.id]" routerLinkActive="active" ariaCurrentWhenActive="page">{{ product.titulo }}</a></h3>
+                  <ul class="price-list">
+                      <li>S/. {{ product.pvp }}</li>
+                  </ul>
+                  <ul class="author-post">
+                      <li class="authot-list">
+                          <span class="content">{{product.pais_edicion}}</span>
+                          <span class="content">{{ product.editor }}</span>
+                      </li>
+                      <li class="star">
+                      </li>
+                  </ul>
+              </div>
+              <div class="shop-button">
+                  <a href="shop-details.html" class="theme-btn"><i class="fa-solid fa-basket-shopping"></i> Add To
+                      Cart</a>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+
+
+
+
+
 <!-- Cta Banner Section start  -->
-<section class="cta-banner-section fix section-padding pt-0">
+<!-- <section class="cta-banner-section fix section-padding pt-0">
     <div class="container">
         <div class="cta-banner-wrapper section-padding bg-cover"
             style="background-image: url('assets/img/cta-banner.jpg');">
@@ -500,10 +1717,10 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 <!-- Top Ratting Book Section start  -->
-<section class="top-ratting-book-section fix section-padding section-bg">
+<!-- <section class="top-ratting-book-section fix section-padding section-bg">
     <div class="container">
         <div class="top-ratting-book-wrapper">
             <div class="section-title-area">
@@ -833,16 +2050,16 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 <!-- Shop Section start  -->
-<section class="shop-section section-padding fix">
+<!-- <section class="shop-section section-padding fix">
     <div class="container">
         <div class="section-title-area">
             <div class="section-title wow fadeInUp" data-wow-delay=".3s">
                 <h2>Top Selling Books</h2>
             </div>
-            <a href="shop.html" class="theme-btn transparent-btn wow fadeInUp" data-wow-delay=".5s">Explore More <i
+            <a href="shop.html" class="theme-btn transparent-btn wow fadeInUp" data-wow-delay=".5s">Descubra más <i
                     class="fa-solid fa-arrow-right-long"></i></a>
         </div>
         <div class="swiper book-slider">
@@ -1123,10 +2340,10 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 <!-- Testimonial Section start  -->
-<section class="testimonial-section fix section-padding pt-0">
+<!-- <section class="testimonial-section fix section-padding pt-0">
     <div class="container">
         <div class="section-title text-left">
             <h2 class="mb-3 wow fadeInUp" data-wow-delay=".3s">What our client say</h2>
@@ -1276,10 +2493,10 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 <!-- Team Section start  -->
-<section class="team-section fix section-padding pt-0 margin-bottom-30">
+<!-- <section class="team-section fix section-padding pt-0 margin-bottom-30">
     <div class="container">
         <div class="section-title text-center">
             <h2 class="mb-3 wow fadeInUp" data-wow-delay=".3s">Featured Author</h2>
@@ -1391,10 +2608,10 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 <!-- News Section start  -->
-<section class="news-section fix section-padding section-bg">
+<!-- <section class="news-section fix section-padding section-bg">
     <div class="container">
         <div class="section-title text-center">
             <h2 class="mb-3 wow fadeInUp" data-wow-delay=".3s">Our Latest News</h2>
@@ -1509,4 +2726,4 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->

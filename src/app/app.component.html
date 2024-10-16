@@ -71,12 +71,11 @@
                       </div>
                   </div>
                   <p class="text d-none d-xl-block">
-                      Nullam dignissim, ante scelerisque the is euismod fermentum odio sem semper the is erat, a
-                      feugiat leo urna eget eros. Duis Aenean a imperdiet risus.
+                      Distribución y venta de libros.
                   </p>
                   <div class="mobile-menu fix mb-3"></div>
                   <div class="offcanvas__contact">
-                      <h4>Contact Info</h4>
+                      <h4>Información y  Contacto</h4>
                       <ul>
                           <li class="d-flex align-items-center">
                               <div class="offcanvas__contact-icon">
@@ -146,6 +145,7 @@
                       <i class="far fa-user-clock"></i>
                       <span>Ventas Online 24 hrs</span>
                   </li>
+
               </ul>
               <ul class="list">
                   <li><i class="fab fa-whatsapp"></i><a href="contact.html">Chat</a></li>
@@ -175,84 +175,80 @@
                               <div class="mean__menu-wrapper">
                                   <div class="main-menu">
                                       <nav>
-                                          <ul>
-                                              <li>
-                                                  <a href="index.html">
-                                                      Home
-                                                      <i class="fas fa-angle-down"></i>
-                                                  </a>
-                                                  <ul class="submenu">
-                                                      <li><a href="index.html">Home 01</a></li>
-                                                      <li><a href="index-2.html">Home 02</a></li>
-                                                  </ul>
-                                              </li>
-                                              <li>
-                                                  <a href="shop.html">
-                                                      Shop
-                                                      <i class="fas fa-angle-down"></i>
-                                                  </a>
-                                                  <ul class="submenu">
-                                                      <li><a href="shop.html">Shop Default</a></li>
-                                                      <li><a href="shop-list.html">Shop List</a></li>
-                                                      <li><a href="shop-details.html">Shop Details</a></li>
-                                                      <li><a href="shop-cart.html">Shop Cart</a></li>
-                                                      <li><a href="wishlist.html">Wishlist</a></li>
-                                                      <li><a href="checkout.html">Checkout</a></li>
-                                                  </ul>
-                                              </li>
-                                              <!-- <li class="has-dropdown">
-                                                  <a href="about.html">
-                                                      Pages
-                                                      <i class="fas fa-angle-down"></i>
-                                                  </a>
-                                                  <ul class="submenu">
-                                                      <li><a href="about.html">About Us</a></li>
-                                                      <li class="has-dropdown">
-                                                          <a href="team.html">
-                                                              Author
-                                                              <i class="fas fa-angle-down"></i>
-                                                          </a>
-                                                          <ul class="submenu">
-                                                              <li><a href="team.html">Author</a></li>
-                                                              <li><a href="team-details.html">Author Profile</a></li>
-                                                          </ul>
-                                                      </li>
-                                                      <li><a href="faq.html">Faq's</a></li>
-                                                      <li><a href="404.html">404 Page</a></li>
-                                                  </ul>
-                                              </li> -->
-                                              <li>
-                                                  <a href="news.html">
-                                                      Idiomas
-                                                      <i class="fas fa-angle-down"></i>
-                                                  </a>
-                                                  <ul class="submenu">
-                                                    <li><a >Español</a></li>
-                                                    <li><a >Ingles</a></li>
-                                                    <li><a >Portugues</a></li>
-                                                    <li><a >Frances</a></li>
-                                                    <li><a >Italiano</a></li>
-                                                    <li><a >Alemán</a></li>
-                                                      <!-- <li><a href="news-grid.html">Blog Grid</a></li>
-                                                      <li><a href="news.html">Blog List</a></li>
-                                                      <li><a href="news-details.html">Blog Details</a></li> -->
-                                                  </ul>
-                                              </li>
-                                              <li>
-                                                  <a href="contact.html">
-                                                    Contacto
-                                                    <i class="fas fa-angle-down"></i>
-                                                  </a>
-                                                  <ul class="submenu">
-                                                    <li><a >Nosotros</a></li>
-                                                    <li><a >Contacto</a></li>
+                                      <ul>
+                                          <li>
+                                              <a [routerLink]="['/']">
+                                                  Ficción
+                                                  <i class="fas fa-angle-down"></i>
+                                              </a>
+                                              <ul class="submenu">
+                                                  <li><a href="shop.html">Shop Default</a></li>
+                                                  <li><a href="shop-list.html">Shop List</a></li>
+                                                  <li><a href="shop-details.html">Shop Details</a></li>
+                                                  <li><a href="shop-cart.html">Shop Cart</a></li>
+                                                  <li><a href="wishlist.html">Wishlist</a></li>
+                                                  <li><a href="checkout.html">Checkout</a></li>
+                                              </ul>
+                                          </li>
+                                          <li>
+                                              <a [routerLink]="['/']">
+                                                  No Ficción
+                                                  <i class="fas fa-angle-down"></i>
+                                              </a>
+                                              <ul class="submenu">
+                                                  <li><a href="shop.html">Shop Default</a></li>
+                                                  <li><a href="shop-list.html">Shop List</a></li>
+                                                  <li><a href="shop-details.html">Shop Details</a></li>
+                                                  <li><a href="shop-cart.html">Shop Cart</a></li>
+                                                  <li><a href="wishlist.html">Wishlist</a></li>
+                                                  <li><a href="checkout.html">Checkout</a></li>
+                                              </ul>
+                                          </li>
+                                          <li>
+                                            <a [routerLink]="['/']">
+                                                Infantil
+                                                <i class="fas fa-angle-down"></i>
+                                            </a>
+                                            <ul class="submenu">
+                                                <li><a href="shop.html">Shop Default</a></li>
+                                                <li><a href="shop-list.html">Shop List</a></li>
+                                                <li><a href="shop-details.html">Shop Details</a></li>
+                                                <li><a href="shop-cart.html">Shop Cart</a></li>
+                                                <li><a href="wishlist.html">Wishlist</a></li>
+                                                <li><a href="checkout.html">Checkout</a></li>
+                                            </ul>
+                                          </li>
+                                          <li>
+                                            <a [routerLink]="['/']">
+                                                Académico
+                                                <i class="fas fa-angle-down"></i>
+                                            </a>
+                                            <ul class="submenu">
+                                                <li><a href="shop.html">Shop Default</a></li>
+                                                <li><a href="shop-list.html">Shop List</a></li>
+                                                <li><a href="shop-details.html">Shop Details</a></li>
+                                                <li><a href="shop-cart.html">Shop Cart</a></li>
+                                                <li><a href="wishlist.html">Wishlist</a></li>
+                                                <li><a href="checkout.html">Checkout</a></li>
+                                            </ul>
+                                          </li>
+                                          <li>
+                                            <a [routerLink]="['/contact']">
+                                                Arte
+                                                <i class="fas fa-angle-down"></i>
+                                            </a>
+                                            <ul class="submenu">
+                                                <li><a href="shop.html">Shop Default</a></li>
+                                                <li><a href="shop-list.html">Shop List</a></li>
+                                                <li><a href="shop-details.html">Shop Details</a></li>
+                                                <li><a href="shop-cart.html">Shop Cart</a></li>
+                                                <li><a href="wishlist.html">Wishlist</a></li>
+                                                <li><a href="checkout.html">Checkout</a></li>
+                                            </ul>
+                                          </li>
 
-                                                      <!-- <li><a href="news-grid.html">Blog Grid</a></li>
-                                                      <li><a href="news.html">Blog List</a></li>
-                                                      <li><a href="news-details.html">Blog Details</a></li> -->
-                                                  </ul>
-                                              </li>
-                                          </ul>
+
+                                      </ul>
                                       </nav>
                                   </div>
                               </div>
@@ -266,24 +262,70 @@
                                   </div>
                                   <select name="cate" class="category">
                                       <option value="1">
-                                          Category
+                                          Clasificación
                                       </option>
                                       <option value="1">
-                                          Web Design
+                                          Las artes
                                       </option>
                                       <option value="1">
-                                          Web Development
+                                          Biografía e historias reales
                                       </option>
                                       <option value="1">
-                                          Graphic Design
+                                          Lenguaje
                                       </option>
                                       <option value="1">
-                                          Softwer Eng
+                                          Literatura y estudios literarios
                                       </option>
+                                      <option value="1">
+                                          Enseñanza de la lengua inglesa
+                                      </option>
+                                      <option value="1">
+                                          Ficción y temas afines
+                                      </option>
+                                      <option value="1">
+                                          Consulta, información y temas interdisciplinarios
+                                      </option>
+                                      <option value="1">
+                                          Humanidades
+                                      </option>
+                                      <option value="1">
+                                          Sociedad y ciencias sociales
+                                      </option>
+                                      <option value="1">
+                                          Economía, finanzas, empresa y gestión
+                                      </option>
+                                      <option value="1">
+                                          Derecho
+                                      </option>
+                                      <option value="1">
+                                          Medicina
+                                      </option>
+                                      <option value="1">
+                                          Matemáticas y ciencia
+                                      </option>
+                                      <option value="1">
+                                         Ciencias de la tierra, geografía, medioambiente, planificación
+                                      </option>
+                                      <option value="1">
+                                          Tecnología, ingeniería, agricultura
+                                      </option>
+                                      <option value="1">
+                                          Computación e informática
+                                      </option>
+                                      <option value="1">
+                                          Salud y desarrollo personal
+                                      </option>
+                                      <option value="1">
+                                          Estilo de vida, deporte y ocio
+                                      </option>
+                                      <option value="1">
+                                          Infantiles, juveniles y didácticos
+                                      </option>
+
                                   </select>
                                   <form action="#" class="search-toggle-box d-md-block">
                                       <div class="input-area">
-                                          <input type="text" placeholder="Author">
+                                          <input type="text" placeholder="Titulo">
                                           <button class="cmn-btn">
                                               <i class="far fa-search"></i>
                                           </button>
@@ -291,9 +333,14 @@
                                   </form>
                               </div>
                               <div class="menu-cart">
-                                  <a href="wishlist.html" class="cart-icon">
-                                      <i class="fa-regular fa-heart"></i>
+
+                                <div class="header-humbager ml-30">
+                                  <a class="sidebar__toggle" href="javascript:void(0)">
+                                      <div class="bar-icon-2">
+                                          <img src="assets/img/flag/spain.png" alt="img" style="width: 24px; height: auto;">
+                                      </div>
                                   </a>
+                                </div>
                                   <a href="shop-cart.html" class="cart-icon">
                                       <i class="fa-regular fa-cart-shopping"></i>
                                   </a>
@@ -315,6 +362,7 @@
       </div>
   </header>
 
+
   <!-- Main Header Section start  -->
   <header class="header-1">
       <div class="mega-menu-wrapper">
@@ -331,85 +379,80 @@
                               <div class="mean__menu-wrapper">
                                   <div class="main-menu">
                                       <nav id="mobile-menu">
-                                          <ul>
-                                              <li>
-                                                  <a [routerLink]="['/']">
+                                        <ul>
+                                            <li>
+                                                <a [routerLink]="['/']">
                                                     Ficción
-
-                                                      <i class="fas fa-angle-down"></i>
-                                                  </a>
-                                                  <ul class="submenu">
-                                                      <li><a href="index.html">Home 01</a></li>
-                                                      <li><a href="index-2.html">Home 02</a></li>
-                                                  </ul>
-                                              </li>
-                                              <li>
-                                                  <a [routerLink]="['/']">
-                                                      No Ficción
-                                                      <i class="fas fa-angle-down"></i>
-                                                  </a>
-                                                  <ul class="submenu">
-                                                      <li><a href="shop.html">Shop Default</a></li>
-                                                      <li><a href="shop-list.html">Shop List</a></li>
-                                                      <li><a href="shop-details.html">Shop Details</a></li>
-                                                      <li><a href="shop-cart.html">Shop Cart</a></li>
-                                                      <li><a href="wishlist.html">Wishlist</a></li>
-                                                      <li><a href="checkout.html">Checkout</a></li>
-                                                  </ul>
-                                              </li>
-                                              <li class="has-dropdown">
-                                                  <a href="about.html">
-                                                      Pages
-                                                      <i class="fas fa-angle-down"></i>
-                                                  </a>
-                                                  <ul class="submenu">
-                                                      <li><a href="about.html">About Us</a></li>
-                                                      <li class="has-dropdown">
-                                                          <a href="team.html">
-                                                              Author
-                                                              <i class="fas fa-angle-down"></i>
-                                                          </a>
-                                                          <ul class="submenu">
-                                                              <li><a href="team.html">Author</a></li>
-                                                              <li><a href="team-details.html">Author Profile</a></li>
-                                                          </ul>
-                                                      </li>
-                                                      <li><a href="faq.html">Faq's</a></li>
-                                                      <li><a href="404.html">404 Page</a></li>
-                                                  </ul>
-                                              </li>
-                                              <li>
-                                                  <a href="news.html">
-                                                      Idioma
-                                                      <i class="fas fa-angle-down"></i>
-                                                  </a>
-                                                  <ul class="submenu">
-                                                      <li><a >Español</a></li>
-                                                      <li><a >Ingles</a></li>
-                                                      <li><a >Portugues</a></li>
-                                                      <li><a >Frances</a></li>
-                                                      <li><a >Italiano</a></li>
-                                                      <li><a >Alemán</a></li>
-                                                      <!-- <li><a href="news-grid.html">Blog Grid</a></li>
-                                                      <li><a href="news.html">Blog List</a></li>
-                                                      <li><a href="news-details.html">Blog Details</a></li> -->
-                                                  </ul>
-                                              </li>
-                                              <li>
-                                                  <a [routerLink]="['/contact']" routerLinkActive="active">
-                                                    Contacto
                                                     <i class="fas fa-angle-down"></i>
-                                                  </a>
-                                                  <ul class="submenu">
-                                                    <li><a >Nosotros</a></li>
-                                                    <li><a >Contacto</a></li>
+                                                </a>
+                                                <ul class="submenu">
+                                                    <li><a href="shop.html">Shop Default</a></li>
+                                                    <li><a href="shop-list.html">Shop List</a></li>
+                                                    <li><a href="shop-details.html">Shop Details</a></li>
+                                                    <li><a href="shop-cart.html">Shop Cart</a></li>
+                                                    <li><a href="wishlist.html">Wishlist</a></li>
+                                                    <li><a href="checkout.html">Checkout</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a [routerLink]="['/']">
+                                                    No Ficción
+                                                    <i class="fas fa-angle-down"></i>
+                                                </a>
+                                                <ul class="submenu">
+                                                    <li><a href="shop.html">Shop Default</a></li>
+                                                    <li><a href="shop-list.html">Shop List</a></li>
+                                                    <li><a href="shop-details.html">Shop Details</a></li>
+                                                    <li><a href="shop-cart.html">Shop Cart</a></li>
+                                                    <li><a href="wishlist.html">Wishlist</a></li>
+                                                    <li><a href="checkout.html">Checkout</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                              <a [routerLink]="['/']">
+                                                  Infantil
+                                                  <i class="fas fa-angle-down"></i>
+                                              </a>
+                                              <ul class="submenu">
+                                                  <li><a href="shop.html">Shop Default</a></li>
+                                                  <li><a href="shop-list.html">Shop List</a></li>
+                                                  <li><a href="shop-details.html">Shop Details</a></li>
+                                                  <li><a href="shop-cart.html">Shop Cart</a></li>
+                                                  <li><a href="wishlist.html">Wishlist</a></li>
+                                                  <li><a href="checkout.html">Checkout</a></li>
+                                              </ul>
+                                            </li>
+                                            <li>
+                                              <a [routerLink]="['/']">
+                                                  Académico
+                                                  <i class="fas fa-angle-down"></i>
+                                              </a>
+                                              <ul class="submenu">
+                                                  <li><a href="shop.html">Shop Default</a></li>
+                                                  <li><a href="shop-list.html">Shop List</a></li>
+                                                  <li><a href="shop-details.html">Shop Details</a></li>
+                                                  <li><a href="shop-cart.html">Shop Cart</a></li>
+                                                  <li><a href="wishlist.html">Wishlist</a></li>
+                                                  <li><a href="checkout.html">Checkout</a></li>
+                                              </ul>
+                                            </li>
+                                            <li>
+                                              <a [routerLink]="['/contact']">
+                                                  Arte
+                                                  <i class="fas fa-angle-down"></i>
+                                              </a>
+                                              <ul class="submenu">
+                                                  <li><a href="shop.html">Shop Default</a></li>
+                                                  <li><a href="shop-list.html">Shop List</a></li>
+                                                  <li><a href="shop-details.html">Shop Details</a></li>
+                                                  <li><a href="shop-cart.html">Shop Cart</a></li>
+                                                  <li><a href="wishlist.html">Wishlist</a></li>
+                                                  <li><a href="checkout.html">Checkout</a></li>
+                                              </ul>
+                                            </li>
 
-                                                      <!-- <li><a href="news-grid.html">Blog Grid</a></li>
-                                                      <li><a href="news.html">Blog List</a></li>
-                                                      <li><a href="news-details.html">Blog Details</a></li> -->
-                                                  </ul>
-                                              </li>
-                                          </ul>
+
+                                        </ul>
                                       </nav>
                                   </div>
                               </div>
@@ -422,22 +465,68 @@
                                       <i class="fa-sharp fa-solid fa-grid-2"></i>
                                   </div>
                                   <select name="cate" class="category">
-                                      <option value="1">
-                                          Category
-                                      </option>
-                                      <option value="1">
-                                          Web Design
-                                      </option>
-                                      <option value="1">
-                                          Web Development
-                                      </option>
-                                      <option value="1">
-                                          Graphic Design
-                                      </option>
-                                      <option value="1">
-                                          Softwer Eng
-                                      </option>
-                                  </select>
+                                    <option value="1">
+                                        Clasificación
+                                    </option>
+                                    <option value="1">
+                                        Las artes
+                                    </option>
+                                    <option value="1">
+                                        Biografía e historias reales
+                                    </option>
+                                    <option value="1">
+                                        Lenguaje
+                                    </option>
+                                    <option value="1">
+                                        Literatura y estudios literarios
+                                    </option>
+                                    <option value="1">
+                                        Enseñanza de la lengua inglesa
+                                    </option>
+                                    <option value="1">
+                                        Ficción y temas afines
+                                    </option>
+                                    <option value="1">
+                                        Consulta, información y temas interdisciplinarios
+                                    </option>
+                                    <option value="1">
+                                        Humanidades
+                                    </option>
+                                    <option value="1">
+                                        Sociedad y ciencias sociales
+                                    </option>
+                                    <option value="1">
+                                        Economía, finanzas, empresa y gestión
+                                    </option>
+                                    <option value="1">
+                                        Derecho
+                                    </option>
+                                    <option value="1">
+                                        Medicina
+                                    </option>
+                                    <option value="1">
+                                        Matemáticas y ciencia
+                                    </option>
+                                    <option value="1">
+                                       Ciencias de la tierra, geografía, medioambiente, planificación
+                                    </option>
+                                    <option value="1">
+                                        Tecnología, ingeniería, agricultura
+                                    </option>
+                                    <option value="1">
+                                        Computación e informática
+                                    </option>
+                                    <option value="1">
+                                        Salud y desarrollo personal
+                                    </option>
+                                    <option value="1">
+                                        Estilo de vida, deporte y ocio
+                                    </option>
+                                    <option value="1">
+                                        Infantiles, juveniles y didácticos
+                                    </option>
+
+                                </select>
                                   <form action="#" class="search-toggle-box d-md-block">
                                       <div class="input-area">
                                           <input type="text" placeholder="Author">
@@ -448,9 +537,13 @@
                                   </form>
                               </div>
                               <div class="menu-cart">
-                                  <a href="wishlist.html" class="cart-icon">
-                                      <i class="fa-regular fa-heart"></i>
+                                <div class="header-humbager ml-30">
+                                  <a class="sidebar__toggle" href="javascript:void(0)">
+                                      <div class="bar-icon-2">
+                                          <img src="assets/img/flag/spain.png" alt="img" style="width: 24px; height: auto;">
+                                      </div>
                                   </a>
+                                </div>
                                   <a href="shop-cart.html" class="cart-icon">
                                       <i class="fa-regular fa-cart-shopping"></i>
                                   </a>

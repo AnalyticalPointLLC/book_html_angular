@@ -3,7 +3,6 @@ import { RouterLink } from '@angular/router';
 import { LecturaService } from '../../core/service/lectura.service';
 import { CommonModule } from '@angular/common';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
-import { switchMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-detailbook',

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { LecturaService } from '../core/service/lectura.service';
 import { CommonModule } from '@angular/common';
+import { LecturaService } from '../core/service/lectura.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -24,7 +24,6 @@ export class HomeComponent implements OnInit {
     this.LecturaService.getPromocionDiario().subscribe({
       next: (lst: any) => {
         this.products = lst;
-        console.log(this.products);
       },
       error: (error: any) => {
         console.error('Error fetching products', error);

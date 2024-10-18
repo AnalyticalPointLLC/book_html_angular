@@ -8110,3 +8110,78 @@ span {
 .testimonial-slider .swiper-slide-active .testimonial-card-items .client-info .client-img .icon .shape {
   filter: invert(23%) sepia(96%) saturate(2210%) hue-rotate(170deg) brightness(95%) contrast(103%);
 }/*# sourceMappingURL=main.css.map */
+
+
+
+
+
+.mega-menu-wrapper {
+  position: relative;
+}
+
+.mega-menu, .submenu {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  z-index: 1000;
+  width: 500px; /* Ancho fijo amplio */
+  box-sizing: border-box;
+  top: 0;
+}
+
+ul > li {
+  position: relative;
+}
+
+ul > li:hover .mega-menu,
+ul > li:hover .submenu {
+  display: block;
+}
+
+.mega-menu ul, .submenu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mega-menu ul > li, .submenu ul > li {
+  width: 100%;
+  margin-bottom: 5px; /* Reducir el espacio entre categorías principales */
+}
+
+.mega-menu ul > li > a, .submenu ul > li > a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold; /* Negrita para categorías principales */
+  padding: 0;
+  line-height: 1.2 !important; /* Interlineado más compacto */
+}
+
+.mega-menu ul ul li, .submenu ul ul li {
+  margin-bottom: 2px !important; /* Reducir el espacio entre subcategorías */
+}
+
+.mega-menu ul ul li a, .submenu ul ul li a {
+  color: #666;
+  text-decoration: none;
+  font-weight: normal !important; /* Texto normal para subcategorías */
+  font-size: 14px !important;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  line-height: 1 !important; /* Forzar interlineado simple */
+}
+
+.mega-menu ul ul li a::before, .submenu ul ul li a::before {
+  content: "•";
+  color: #ff6347;
+  font-size: 1em;
+  margin-right: 10px;
+}
+
+.mega-menu ul li a:hover, .submenu ul li a:hover {
+  text-decoration: underline;
+}

@@ -1,26 +1,26 @@
 <!-- Breadcumb Section Start -->
-<div class="breadcrumb-wrapper">
-    <div class="book1">
+<div class="breadcrumb-wrapper" style="padding: 0px 0 !important">
+    <!-- <div class="book1">
         <img src="assets/img/hero/book1.png" alt="book">
-    </div>
-    <div class="book2">
+    </div> -->
+    <!-- <div class="book2">
         <img src="assets/img/hero/book2.png" alt="book">
-    </div>
+    </div> -->
     <div class="container">
         <div class="page-heading">
-            <h1>Detalle del Articulo</h1>
+            <h1>Detalle del Libro</h1>
             <div class="page-header">
                 <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".3s">
                     <li>
                         <a href="/home">
-                            Home
+                            Inicio
                         </a>
                     </li>
                     <li>
                         <i class="fa-solid fa-chevron-right"></i>
                     </li>
                     <li>
-                        Detalle Articulo
+                        Detalle Libro
                     </li>
                 </ul>
             </div>
@@ -100,7 +100,7 @@
                     <div class="shop-details-content">
                         <div class="title-wrapper">
                             <h2>{{dtltitulo }}</h2>
-                            <h5>Stock availability.</h5>
+                            <h5>Disponibilidad.</h5>
                         </div>
                         <div class="star">
                             <a href="shop-details.html"> <i class="fas fa-star"></i></a>
@@ -108,13 +108,13 @@
                             <a href="shop-details.html"> <i class="fas fa-star"></i></a>
                             <a href="shop-details.html"><i class="fas fa-star"></i></a>
                             <a href="shop-details.html"><i class="fa-regular fa-star"></i></a>
-                            <span>(1 Customer Reviews)</span>
+                            <span>(1 Revisión Clientes)</span>
                         </div>
                         <p>
                             {{dtldescripcion}}
                         </p>
                         <div class="price-list">
-                            <h3>{{dtlprecio}}</h3>
+                            <h3>S./ {{dtlprecio}}</h3>
                         </div>
                         <div class="cart-wrapper">
                             <div class="quantity-basket">
@@ -124,10 +124,10 @@
                                     <button class="qtyplus" aria-hidden="true">+</button>
                                 </p>
                             </div>
-                            <button type="button" class="theme-btn style-2" data-bs-toggle="modal"
+                            <!-- <button type="button" class="theme-btn style-2" data-bs-toggle="modal"
                                 data-bs-target="#readMoreModal">
                                 Read A little
-                            </button>
+                            </button> -->
                             <!-- Read More Modal -->
                             <!--
                             <div class="modal fade" id="readMoreModal" tabindex="-1"
@@ -177,7 +177,7 @@
                             </div>
                             -->
                             <a href="shop-details.html" class="theme-btn"><i class="fa-solid fa-basket-shopping"></i>
-                                Add To Cart</a>
+                                  Agrega al carrito</a>
                             <div class="icon-box">
                                 <a href="shop-details.html" class="icon">
                                     <i class="far fa-heart"></i>
@@ -193,31 +193,50 @@
                                     <li>
                                         <span>SKU:</span> {{dtlsku}}
                                     </li>
+
                                     <li>
-                                        <span>Autor:</span> {{dtautor}}
+                                      <span>IBIC:</span> {{dtclasificacion}}
+                                    </li>
+                                    <li>
+                                      <span>Clasificación:</span> {{dtnombreclasificacion}}
                                     </li>
                                 </ul>
                                 <ul>
+                                    <li>
+                                      <span>Autor:</span> {{dtautor}}
+                                  </li>
                                     <li>
                                         <span>Idioma:</span> {{dtlidioma}}
                                     </li>
                                     <li>
-                                        <span>Página:</span> {{dtlpagina}}
+                                        <span>Editor:</span> {{dtlEditor}}
                                     </li>
+                                </ul>
+
+                                <ul>
+
+                                    <li>
+                                      <span>Sello:</span> {{dtsello}}
+                                    </li>
+                                    <li>
+                                      <span>País Edición:</span> {{dtpaisedicion}}
+                                    </li>
+                                    <li>
+                                      <span>Fecha Publicación:</span> {{dtlfecha}}
+                                  </li>
                                 </ul>
                                 <ul>
-                                    <li>
-                                        <span>Ancho:</span> {{dtlancho}}
-                                    </li>
-                                    <li>
-                                        <span>Alto:</span> {{dtlalto}}
-                                    </li>
-                                </ul>
-                                <ul>
-                                    <li>
-                                        <span>Fecha:</span> {{dtlfecha}}
-                                    </li>
-                                </ul>
+                                  <li>
+                                      <span>Ancho:</span> {{dtlancho}}
+                                  </li>
+                                  <li>
+                                      <span>Alto:</span> {{dtlalto}}
+                                  </li>
+
+                                  <li>
+                                    <span>Páginas:</span> {{dtlpagina}}
+                                </li>
+                              </ul>
                             </div>
                         </div>
                         <!--
@@ -260,7 +279,7 @@
                     <li class="nav-item" role="presentation">
                         <a href="#description" data-bs-toggle="tab" class="nav-link ps-0 active" aria-selected="true"
                             role="tab">
-                            <h6>Description</h6>
+                            <h6>Descripción</h6>
                         </a>
                     </li>
                     <!--

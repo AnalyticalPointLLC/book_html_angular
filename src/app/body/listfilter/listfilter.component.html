@@ -100,19 +100,19 @@
                                             <option value="Español" selected>
                                                 Español
                                             </option>
-                                            <option value="Portugués">
+                                            <option value="Portugues">
                                                 Portugués
                                             </option>
-                                            <option value="Inglés">
+                                            <option value="Ingles">
                                                 Inglés
                                             </option>
-                                            <option value="Francés">
+                                            <option value="Frances">
                                                 Francés
                                             </option>
                                             <option value="Italiano">
                                                 Italiano
                                             </option>
-                                            <option value="Alemán">
+                                            <option value="Aleman">
                                                 Alemán
                                             </option>
 
@@ -425,6 +425,12 @@
                                 <div class="shop-box-items">
                                     <div class="book-thumb center">
                                         <a [routerLink]="['/detail-book', item.id]"><img src="{{item.imagen_tapa}}" alt="img"></a>
+                                        <ul class="post-box">
+                                          <li *ngIf="item.promocion === 'diaria'">Nuevo Titulo</li>
+                                          <!-- <li *ngIf="item.tipo_notificacion">-{{item.discount}}%</li> -->
+
+
+                                      </ul>
                                         <ul class="shop-icon d-grid justify-content-center align-items-center">
                                             <li>
                                                 <a href="shop-cart.html"><i class="far fa-heart"></i></a>
@@ -440,19 +446,33 @@
                                         </ul>
                                     </div>
                                     <div class="shop-content">
-                                        <h3><a href="shop-details.html">{{item.titulo}}</a></h3>
+                                        <p class="detalle">Autor: {{item.autor}}</p>
+                                        <h3 class="title-three-lines"><a href="shop-details.html">{{item.titulo}}</a></h3>
+                                        <p class="isbn">ISBN-13: {{item.isbn13}}</p>
+                                        <p class="isbn">IBIC: {{item.clasificacion}}</p>
+                                        <p class="detalle">Idioma: {{item.idioma_edicion}}</p>
                                         <ul class="price-list">
-                                            <li>{{item.pvp}}</li>
-                                            <!--
-                                            <li>
+                                            <li>S./ {{item.pvp}}</li>
+
+
+                                            <li [ngClass]="{'disponible': item.tipo_notificacion === 'A', 'no-disponible': item.tipo_notificacion === 'B'}">
+                                              {{ item.tipo_notificacion === 'A' ? 'Stock Disponible' : 'No Disponible' }}
+                                            </li>
+
+                                            <!-- <li>
                                                 <i class="fa-solid fa-star"></i>
                                                 3.4 (25)
-                                            </li>
-                                            -->
+                                            </li> -->
+
                                         </ul>
+
+
+
+
+
                                         <div class="shop-button">
                                             <a href="shop-details.html" class="theme-btn"><i
-                                                    class="fa-solid fa-basket-shopping"></i> Add To Cart</a>
+                                                    class="fa-solid fa-basket-shopping"></i> Agrega al carrito</a>
                                         </div>
                                     </div>
                                 </div>

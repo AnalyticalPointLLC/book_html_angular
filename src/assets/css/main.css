@@ -8185,3 +8185,49 @@ ul > li:hover .submenu {
 .mega-menu ul li a:hover, .submenu ul li a:hover {
   text-decoration: underline;
 }
+
+
+
+
+
+
+.title-three-lines {
+  height: 3em; /* Aproximadamente 3 líneas de texto */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Limita a 3 líneas */
+  -webkit-box-orient: vertical;
+}
+
+
+.isbn {
+  font-size: 10px; /* Tamaño de fuente pequeño para el SKU */
+  color: #666; /* Color del texto */
+  margin: 0; /* Eliminar margen si es necesario */
+  padding: 0; /* Eliminar padding si es necesario */
+  line-height: 1.5; /* Interlineado mínimo */
+
+
+}
+
+.detalle {
+  font-size: 12px; /* Tamaño de fuente pequeño para el SKU */
+  color: #666; /* Color del texto */
+  margin: 0; /* Eliminar margen si es necesario */
+  padding: 0; /* Eliminar padding si es necesario */
+  line-height: 1.5; /* Interlineado mínimo */
+
+
+}
+
+.disponible {
+  color: green !important; /* Color verde para "Disponible" */
+  font-weight: bold;
+}
+
+.no-disponible {
+  color: red !important; /* Color rojo para "No Disponible" */
+  font-weight: bold;
+}

@@ -31,6 +31,10 @@ export class DetailbookComponent {
   public dtlimagen: string = '';
   public dtlid: string = '';
   public dtautor: string = '';
+  public dtclasificacion: string = '';
+  public dtnombreclasificacion: string = '';
+  public dtsello: string = '';
+  public dtpaisedicion: string = '';
 
   constructor(
     private lecturaService: LecturaService,
@@ -66,7 +70,15 @@ export class DetailbookComponent {
         this.dtlformato = lst.formato;
         this.dtlimagen = lst.imagen_tapa;
         this.dtautor = lst.autor;
+        this.dtclasificacion = lst.clasificacion;
+        this.dtnombreclasificacion = lst.nombre_clasificacion;
+        this.dtsello = lst.sello;
+        this.dtpaisedicion = lst.pais_edicion;
+
       },
+      error: (err) => {
+        console.error('Error fetching book details:', err);
+      }
     });
   }
   limpiarInfo() {
@@ -86,5 +98,12 @@ export class DetailbookComponent {
     this.dtlformato = '';
     this.dtlimagen = '';
     this.dtautor = '';
+    this.dtclasificacion = '';
+    this.dtnombreclasificacion = '';
+    this.dtsello = '';
+    this.dtpaisedicion = '';
+
+
+
   }
 }

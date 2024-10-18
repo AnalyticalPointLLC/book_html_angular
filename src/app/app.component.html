@@ -166,100 +166,265 @@
         <div class="header-main">
             <div class="container">
                 <div class="row">
-                    <div class="col-6 col-md-6 col-lg-10 col-xl-8 col-xxl-10">
-                        <div class="header-left">
-                            <div class="logo">
-                                <a [routerLink]="['/']" class="header-logo">
-                                    <img src="assets/img/logo/logo_negro_lectura_2.svg" alt="logo-img">
-                                </a>
-                            </div>
-                            <div class="mean__menu-wrapper">
-                                <div class="main-menu">
-                                    <nav>
-                                        <ul>
-                                            <li>
-                                                <a [routerLink]="['/listfilter','Ficcion']">
-                                                    Ficción
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a [routerLink]="['/listfilter','NoFiccion']">
-                                                    No Ficción
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a [routerLink]="['/listfilter','Infantil']">
-                                                    Infantil
-                                                </a>
-                                                <!-- <ul class="submenu">
-                                                <li><a href="shop.html">Shop Default</a></li>
-                                                <li><a href="shop-list.html">Shop List</a></li>
-                                                <li><a href="shop-details.html">Shop Details</a></li>
-                                                <li><a href="shop-cart.html">Shop Cart</a></li>
-                                                <li><a href="wishlist.html">Wishlist</a></li>
-                                                <li><a href="checkout.html">Checkout</a></li>
-                                            </ul> -->
-                                            </li>
-                                            <li>
-                                                <a [routerLink]="['/listfilter','Academico']">
-                                                    Académico
-                                                </a>
-
-                                            </li>
-                                            <li>
-                                                <a [routerLink]="['/listfilter','Arte']">
-                                                    Arte
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a [routerLink]="['/listfilter']">
-                                                    Clasificación
-                                                    <i class="fas fa-angle-down"></i>
-                                                </a>
-                                                <ul class="submenu">
-                                                    <li><a [routerLink]="['/listfilter','A']">Las artes</a></li>
-                                                    <li><a [routerLink]="['/listfilter','B']">Biografía e historias
-                                                            reales</a></li>
-                                                    <li><a [routerLink]="['/listfilter','C']">Lenguaje</a></li>
-                                                    <li><a [routerLink]="['/listfilter','D']">Literatura y estudios
-                                                            literarios</a></li>
-                                                    <li><a [routerLink]="['/listfilter','E']">Enseñanza de la lengua
-                                                            inglesa</a></li>
-                                                    <li><a [routerLink]="['/listfilter','F']">Ficción y temas afines</a>
+                  <div class="col-6 col-md-6 col-lg-10 col-xl-8 col-xxl-10">
+                    <div class="header-left">
+                        <div class="logo">
+                            <a [routerLink]="['/home']" class="header-logo">
+                                <img src="assets/img/logo/logo_negro_lectura_2.svg" alt="logo-img">
+                            </a>
+                        </div>
+                        <div class="mean__menu-wrapper">
+                            <div class="main-menu">
+                                <nav id="mobile-menu">
+                                    <ul>
+                                        <li>
+                                            <a [routerLink]="['/listfilter','F']" style="font-weight: bold;">
+                                                Ficción
+                                            </a>
+                                            <div class="submenu">
+                                                <ul>
+                                                    <li>
+                                                        <a [routerLink]="['/listfilter','F']">Ficción y temas afines (F)</a>
+                                                        <ul>
+                                                            <li><a href="#">Subcategoría 1</a></li>
+                                                            <li><a href="#">Subcategoría 2</a></li>
+                                                        </ul>
                                                     </li>
-                                                    <li><a [routerLink]="['/listfilter','G']">Consulta, información y
-                                                            temas interdisciplinarios</a></li>
-                                                    <li><a [routerLink]="['/listfilter','H']">Humanidades</a></li>
-                                                    <li><a [routerLink]="['/listfilter','J']">Sociedad y ciencias
-                                                            sociales</a></li>
-                                                    <li><a [routerLink]="['/listfilter','K']">Economía, finanzas,
-                                                            empresa y gestión</a></li>
-                                                    <li><a [routerLink]="['/listfilter','L']">Derecho</a></li>
-                                                    <li><a [routerLink]="['/listfilter','M']">Medicina</a></li>
-                                                    <li><a [routerLink]="['/listfilter','P']">Matemáticas y ciencia</a>
-                                                    </li>
-                                                    <li><a [routerLink]="['/listfilter','R']">Ciencias de la tierra,
-                                                            geografía, medioambiente, planificación</a></li>
-                                                    <li><a [routerLink]="['/listfilter','T']">Tecnología, ingeniería,
-                                                            agricultura</a></li>
-                                                    <li><a [routerLink]="['/listfilter','U']">Computación e
-                                                            informática</a></li>
-                                                    <li><a [routerLink]="['/listfilter','V']">Salud y desarrollo
-                                                            personal</a></li>
-                                                    <li><a [routerLink]="['/listfilter','W']">Estilo de vida, deporte y
-                                                            ocio</a></li>
-                                                    <li><a [routerLink]="['/listfilter','Y']">Infantiles, juveniles y
-                                                            didácticos</a></li>
                                                 </ul>
-                                            </li>
+                                            </div>
+                                        </li>
 
 
-                                        </ul>
-                                    </nav>
-                                </div>
+
+
+                                        <li>
+                                            <a [routerLink]="['/listfilter','D']" style="font-weight: bold;">
+                                                No Ficción
+                                            </a>
+                                            <div class="submenu">
+                                                <ul>
+                                                    <li>
+                                                      <a [routerLink]="['/listfilter','D']">Literatura y estudios literarios (D)</a>
+                                                      <ul>
+                                                        <li><a href="#">Subcategoría 1</a></li>
+                                                        <li><a href="#">Subcategoría 2</a></li>
+                                                      </ul>
+                                                    </li>
+
+
+                                                    <li>
+                                                      <a [routerLink]="['/listfilter','B']">Biografía, historias reales (B)</a>
+                                                      <ul>
+                                                        <li><a href="#">Subcategoría 1</a></li>
+                                                        <li><a href="#">Subcategoría 2</a></li>
+                                                      </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+
+
+
+                                        <li>
+                                            <a [routerLink]="['/listfilter','Y']" style="font-weight: bold;">
+                                                Infantil
+                                            </a>
+                                            <div class="submenu">
+                                              <ul>
+                                                  <li>
+                                                    <a [routerLink]="['/listfilter','Y']">Infantiles, juveniles y didácticos (Y)
+                                                    </a>
+                                                    <ul>
+                                                      <li><a href="#">Subcategoría 1</a></li>
+                                                      <li><a href="#">Subcategoría 2</a></li>
+                                                    </ul>
+                                                  </li>
+
+                                              </ul>
+                                          </div>
+                                        </li>
+
+
+
+                                        <li>
+                                            <a [routerLink]="['/listfilter','P']" style="font-weight: bold;">
+                                                Educación
+                                            </a>
+                                            <div class="submenu">
+                                              <ul>
+                                                  <li>
+                                                    <a [routerLink]="['/listfilter','H']">Humanidades (H)</a>
+                                                    <ul>
+                                                      <li><a href="#">Subcategoría 1</a></li>
+                                                      <li><a href="#">Subcategoría 2</a></li>
+                                                    </ul>
+                                                  </li>
+
+                                                  <li>
+                                                    <a [routerLink]="['/listfilter','E']">Enseñanza de la lengua inglesa (E)</a>
+                                                    <ul>
+                                                      <li><a href="#">Subcategoría 1</a></li>
+                                                      <li><a href="#">Subcategoría 2</a></li>
+                                                    </ul>
+                                                  </li>
+
+
+                                                  <li>
+                                                    <a [routerLink]="['/listfilter','P']">Matemáticas y ciencia (P)</a>
+                                                    <ul>
+                                                      <li><a href="#">Subcategoría 1</a></li>
+                                                      <li><a href="#">Subcategoría 2</a></li>
+                                                    </ul>
+                                                  </li>
+
+
+                                                  <li>
+                                                    <a [routerLink]="['/listfilter','C']">Lenguaje (C)</a>
+                                                    <ul>
+                                                      <li><a href="#">Subcategoría 1</a></li>
+                                                      <li><a href="#">Subcategoría 2</a></li>
+                                                    </ul>
+                                                  </li>
+
+
+                                              </ul>
+                                            </div>
+                                        </li>
+
+
+
+
+
+
+                                      <li>
+                                        <a [routerLink]="['/listfilter','U']" style="font-weight: bold;">
+                                            Ciencia
+                                        </a>
+                                        <div class="submenu">
+                                          <ul>
+                                              <li>
+                                                <a [routerLink]="['/listfilter','U']">Computación e informática (U)</a>
+                                                <ul>
+                                                  <li><a href="#">Subcategoría 1</a></li>
+                                                  <li><a href="#">Subcategoría 2</a></li>
+                                                </ul>
+                                              </li>
+
+
+                                              <li>
+                                                <a [routerLink]="['/listfilter','T']">Tecnología, ingeniería, agricultura (T)</a>
+                                                <ul>
+                                                  <li><a href="#">Subcategoría 1</a></li>
+                                                  <li><a href="#">Subcategoría 2</a></li>
+                                                </ul>
+                                              </li>
+
+                                              <li>
+                                                <a [routerLink]="['/listfilter','R']">Ciencias de la tierra, geografía, medioambiente, planificación (R)</a>
+                                                <ul>
+                                                  <li><a href="#">Subcategoría 1</a></li>
+                                                  <li><a href="#">Subcategoría 2</a></li>
+                                                </ul>
+                                              </li>
+
+                                              <li>
+                                                <a [routerLink]="['/listfilter','M']">Medicina (M)</a>
+                                                <ul>
+                                                  <li><a href="#">Subcategoría 1</a></li>
+                                                  <li><a href="#">Subcategoría 2</a></li>
+                                                </ul>
+                                              </li>
+
+                                          </ul>
+                                        </div>
+                                      </li>
+
+
+
+                                      <li>
+                                        <a [routerLink]="['/listfilter','Infantil']" style="font-weight: bold;">
+                                            Arte
+                                        </a>
+                                        <div class="submenu">
+                                          <ul>
+                                              <li>
+                                                <a [routerLink]="['/listfilter','A']">Las artes (A)</a>
+                                                <ul>
+                                                  <li><a href="#">Subcategoría 1</a></li>
+                                                  <li><a href="#">Subcategoría 2</a></li>
+                                                </ul>
+                                              </li>
+
+
+                                              <li>
+                                                <a [routerLink]="['/listfilter','W']">Estilo de vida, deporte y ocio (W)</a>
+                                                <ul>
+                                                  <li><a href="#">Subcategoría 1</a></li>
+                                                  <li><a href="#">Subcategoría 2</a></li>
+                                                </ul>
+                                              </li>
+
+
+                                              <li>
+                                                <a [routerLink]="['/listfilter','V']">Salud y desarrollo personal (V)</a>
+                                                <ul>
+                                                  <li><a href="#">Subcategoría 1</a></li>
+                                                  <li><a href="#">Subcategoría 2</a></li>
+                                                </ul>
+                                              </li>
+
+                                          </ul>
+                                        </div>
+                                      </li>
+
+
+
+
+                                      <li>
+                                        <a [routerLink]="['/listfilter','K']" style="font-weight: bold;">
+                                            Negocios
+                                        </a>
+                                        <div class="submenu">
+                                          <ul>
+                                              <li>
+                                                <a [routerLink]="['/listfilter','K']">Economía, finanzas, empresa y gestión (K)</a>
+                                                <ul>
+                                                  <li><a href="#">Subcategoría 1</a></li>
+                                                  <li><a href="#">Subcategoría 2</a></li>
+                                                </ul>
+                                              </li>
+
+
+                                              <li>
+                                                <a [routerLink]="['/listfilter','L']">Derecho (L)</a>
+                                                <ul>
+                                                  <li><a href="#">Subcategoría 1</a></li>
+                                                  <li><a href="#">Subcategoría 2</a></li>
+                                                </ul>
+                                              </li>
+
+
+                                              <li>
+                                                <a [routerLink]="['/listfilter','J']">Sociedad y ciencias sociales (J)</a>
+                                                <ul>
+                                                  <li><a href="#">Subcategoría 1</a></li>
+                                                  <li><a href="#">Subcategoría 2</a></li>
+                                                </ul>
+                                              </li>
+
+                                          </ul>
+                                        </div>
+                                      </li>
+                                    </ul>
+                                </nav>
                             </div>
                         </div>
+
+
+
+
                     </div>
+                </div>
                     <div class="col-6 col-md-6 col-lg-2 col-xl-4 col-xxl-2">
                         <div class="header-right">
                             <div class="category-oneadjust gap-6 d-flex align-items-center">

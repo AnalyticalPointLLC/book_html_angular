@@ -35,6 +35,7 @@ export class DetailbookComponent {
   public dtnombreclasificacion: string = '';
   public dtsello: string = '';
   public dtpaisedicion: string = '';
+  public dttiponotificacion: string = '';
 
   constructor(
     private lecturaService: LecturaService,
@@ -74,6 +75,7 @@ export class DetailbookComponent {
         this.dtnombreclasificacion = lst.nombre_clasificacion;
         this.dtsello = lst.sello;
         this.dtpaisedicion = lst.pais_edicion;
+        this.dttiponotificacion = lst.tipo_notificacion;
 
       },
       error: (err) => {
@@ -102,6 +104,8 @@ export class DetailbookComponent {
     this.dtnombreclasificacion = '';
     this.dtsello = '';
     this.dtpaisedicion = '';
+    this.dttiponotificacion = '';
+
 
 
 

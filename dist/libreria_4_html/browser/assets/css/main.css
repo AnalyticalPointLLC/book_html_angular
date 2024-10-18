@@ -8203,11 +8203,11 @@ ul > li:hover .submenu {
 
 
 .isbn {
-  font-size: 10px; /* Tamaño de fuente pequeño para el SKU */
+  font-size: 10px !important; /* Tamaño de fuente pequeño para el SKU */
   color: #666; /* Color del texto */
-  margin: 0; /* Eliminar margen si es necesario */
-  padding: 0; /* Eliminar padding si es necesario */
-  line-height: 1.5; /* Interlineado mínimo */
+  margin: 0 !important; /* Eliminar margen si es necesario */
+  padding: 0 !important; /* Eliminar padding si es necesario */
+  line-height: 1.5 !important; /* Interlineado mínimo */
 
 
 }
@@ -8215,9 +8215,9 @@ ul > li:hover .submenu {
 .detalle {
   font-size: 12px; /* Tamaño de fuente pequeño para el SKU */
   color: #666; /* Color del texto */
-  margin: 0; /* Eliminar margen si es necesario */
-  padding: 0; /* Eliminar padding si es necesario */
-  line-height: 1.5; /* Interlineado mínimo */
+  margin: 0 !important; /* Eliminar margen si es necesario */
+  padding: 0 !important; /* Eliminar padding si es necesario */
+  line-height: 1.5 !important; /* Interlineado mínimo */
 
 
 }

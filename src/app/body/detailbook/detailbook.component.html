@@ -100,7 +100,10 @@
                     <div class="shop-details-content">
                         <div class="title-wrapper">
                             <h2>{{dtltitulo }}</h2>
-                            <h5>Disponibilidad.</h5>
+                            <!-- <h5>Disponibilidad.</h5> -->
+                            <li [ngClass]="{'disponible': dttiponotificacion === 'A', 'no-disponible': dttiponotificacion === 'B'}">
+                              {{ dttiponotificacion === 'A' ? 'Disponible' : 'No Disponible' }}
+                            </li>
                         </div>
                         <div class="star">
                             <a href="shop-details.html"> <i class="fas fa-star"></i></a>

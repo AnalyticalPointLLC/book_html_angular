@@ -68,10 +68,11 @@
                         <img [src]="product.imagen_tapa" alt="{{ product.titulo }}">
                     </a>
                     <ul class="post-box">
-                        <li>
-                            Nuevo
-                        </li>
-                    </ul>
+                      <li *ngIf="product.promocion === 'diaria'">Nuevo Titulo</li>
+                      <!-- <li *ngIf="item.tipo_notificacion">-{{item.discount}}%</li> -->
+
+
+                  </ul>
                     <ul class="shop-icon d-grid justify-content-center align-items-center">
                         <li>
                             <a><i class="far fa-heart"></i></a>
@@ -87,24 +88,32 @@
                     </ul>
                 </div>
                 <div class="shop-content">
-                    <h5>{{ product.autor }}</h5>
-                    <h3><a [routerLink]="['/detail-book', product.id]" routerLinkActive="active"
-                            ariaCurrentWhenActive="page">{{ product.titulo }}</a></h3>
+                    <h5 class="detalle">{{ product.autor }}</h5>
+                        <h3 class="title-three-lines">
+                          <a [routerLink]="['/detail-book', product.id]" routerLinkActive="active"
+                            ariaCurrentWhenActive="page">{{ product.titulo }}</a>
+                        </h3>
+
+                        <p class="isbn">ISBN-13: {{product.isbn13}}</p>
+                        <p class="isbn">IBIC: {{product.clasificacion}}</p>
+                        <p class="detalle">Idioma: {{product.idioma_edicion}}</p>
+                        <p class="detalle">Promoción: {{product.promocion}}</p>
+
                     <ul class="price-list">
                         <li>S/. {{ product.pvp }}</li>
                     </ul>
-                    <ul class="author-post">
+                    <!-- <ul class="author-post">
                         <li class="authot-list">
                             <span class="content">{{product.pais_edicion}}</span>
                             <span class="content">{{ product.editor }}</span>
                         </li>
                         <li class="star">
                         </li>
-                    </ul>
+                    </ul> -->
                 </div>
                 <div class="shop-button">
                     <a [routerLink]="['/wishlist']" class="theme-btn"><i class="fa-solid fa-basket-shopping"></i>
-                        Agregar al Carrito</a>
+                        Agregar</a>
                 </div>
             </div>
         </div>
@@ -119,7 +128,7 @@
             <div class="section-title">
                 <h2>Ficción</h2>
             </div>
-            <button class="theme-btn transparent-btn" [routerLink]="['/listfilter','A']" >
+            <button class="theme-btn transparent-btn" [routerLink]="['/listfilter','F']" >
                 {{ 'Descubra más' }} <i class="fa-solid fa-arrow-right-long"></i>
             </button>
         </div>

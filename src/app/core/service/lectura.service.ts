@@ -15,6 +15,8 @@ export class LecturaService {
   private filterclasificacionIdioma = '/bmg_books/classifications/books';
   private Searchtituloidioma = '/bmg_books/search_by_language_and_title';
 
+  private PrefixFilterClasificacionIdioma = '/bmg_books/classifications/prefix';
+
   constructor(private http: HttpClient) {}
   getPromocionDiario(): Observable<any> {
     return this.http.get(
@@ -59,4 +61,23 @@ export class LecturaService {
         '&limit=100&offset=0'
     );
   }
+
+  getPrefixFilterClasificacionIdioma(
+    idioma: string,
+    clasificacion: string
+  ): Observable<any> {
+    // Nuevo método
+    return this.http.get(
+      this.baseUrl +
+        this.PrefixFilterClasificacionIdioma +
+        '/' +
+        clasificacion +
+        '/language/' +
+        idioma +
+        '?limit=100&offset=0'
+    );
+  }
+
+
+
 }

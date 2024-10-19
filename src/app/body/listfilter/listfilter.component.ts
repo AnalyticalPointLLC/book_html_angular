@@ -28,12 +28,13 @@ export class ListfilterComponent implements OnInit {
     this.route.params.subscribe((params) => {
       this.dtltipo = params['ibic'];
       this.VoidListadoProducto();
+      window.scrollTo(0, 0);
     });
   }
 
   VoidListadoProducto() {
     this.lecturaService
-      .getfilterclasificacionIdioma(this.txtcatidioma, this.dtltipo)
+      .getPrefixFilterClasificacionIdioma(this.txtcatidioma, this.dtltipo)
       .subscribe({
         next: (dtl: any) => {
           console.log(dtl);

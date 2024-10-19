@@ -12,6 +12,6 @@ export const routes: Routes = [
   { path: 'wishlist', component: WishlistComponent },
   { path: 'detail-book/:id', component: DetailbookComponent },
   { path: 'checkout', component: CheckoutComponent },
-  { path: 'listfilter/:ibic', component: ListfilterComponent },
+  { path: 'listfilter/:ibic/:nombreCategoria', component: ListfilterComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
 ];

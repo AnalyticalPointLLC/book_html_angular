@@ -54,9 +54,9 @@
     <div class="container" >
         <div class="section-title-area">
             <div class="section-title">
-                <h2>Novedades</h2>
+                <h2>Nuevos Títulos</h2>
             </div>
-            <button class="theme-btn transparent-btn" [routerLink]="['/listfilter','Novedades']" >
+            <button class="theme-btn transparent-btn" [routerLink]="['/listfilter', 'NuevosTitulos', 'Nuevos Títulos']" >
                 {{ 'Descubra más' }} <i class="fa-solid fa-arrow-right-long"></i>
             </button>
         </div>
@@ -129,7 +129,7 @@
         <div class="section-title">
           <h2>{{ category.nombre_clasificacion }}</h2>
         </div>
-        <button class="theme-btn transparent-btn" [routerLink]="['/listfilter', category.codigo_ibic]">
+        <button class="theme-btn transparent-btn" [routerLink]="['/listfilter', category.codigo_ibic, category.nombre_clasificacion]">
           {{ 'Descubra más' }} <i class="fa-solid fa-arrow-right-long"></i>
         </button>
       </div>

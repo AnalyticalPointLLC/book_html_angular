@@ -17,6 +17,7 @@ export class ListfilterComponent implements OnInit {
   public lstProducto: any[] = [];
   public txtcatidioma: string = 'Español';
   public txtsearchtitulo: string = '';
+  public nombreCategoria: string = '';
 
   constructor(
     private lecturaService: LecturaService,
@@ -27,8 +28,27 @@ export class ListfilterComponent implements OnInit {
   ngOnInit() {
     this.route.params.subscribe((params) => {
       this.dtltipo = params['ibic'];
+      this.nombreCategoria = params['nombreCategoria']; // Obtener el nombre de la categoría
+
+      if (this.dtltipo === 'NuevosTitulos') {
+        this.loadNuevosTitulos();
+      } else {
+        this.VoidListadoProducto();
+      }
+
       this.VoidListadoProducto();
       window.scrollTo(0, 0);
+    });
+  }
+
+  loadNuevosTitulos() {
+    this.lecturaService.getPromocionDiario().subscribe({
+      next: (lst: any) => {
+        this.lstProducto = lst;
+      },
+      error: (error: any) => {
+        console.error('Error fetching nuevos títulos', error);
+      }
     });
   }
 

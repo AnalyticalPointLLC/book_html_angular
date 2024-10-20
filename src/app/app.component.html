@@ -9,24 +9,45 @@
         <div class="spinner">
         </div>
         <div class="txt-loading">
-            <span data-text-preloader="B" class="letters-loading">
-                B
+            <span data-text-preloader="M" class="letters-loading">
+                M
+            </span>
+            <span data-text-preloader="H" class="letters-loading">
+                H
             </span>
             <span data-text-preloader="O" class="letters-loading">
                 O
             </span>
-            <span data-text-preloader="O" class="letters-loading">
-                O
+            <span data-text-preloader="-" class="letters-loading">
+                -
             </span>
-            <span data-text-preloader="K" class="letters-loading">
-                K
+            <span data-text-preloader="D" class="letters-loading">
+                D
             </span>
-            <span data-text-preloader="L" class="letters-loading">
+            <span data-text-preloader="I" class="letters-loading">
+                I
+            </span>
+
+              <span data-text-preloader="G" class="letters-loading">
+                G
+              </span>
+
+              <span data-text-preloader="I" class="letters-loading">
+                I
+              </span>
+
+              <span data-text-preloader="T" class="letters-loading">
+                T
+              </span>
+
+              <span data-text-preloader="A" class="letters-loading">
+                A
+              </span>
+
+              <span data-text-preloader="L" class="letters-loading">
                 L
-            </span>
-            <span data-text-preloader="E" class="letters-loading">
-                E
-            </span>
+              </span>
+
         </div>
         <p class="text-center">Cargando</p>
     </div>
@@ -715,8 +736,16 @@
                                                   <li>
                                                       <a [routerLink]="['/listfilter','F', 'Ficción y temas afines']">Ficción y temas afines (F)</a>
                                                       <ul>
-                                                          <li><a href="#">Subcategoría 1</a></li>
-                                                          <li><a href="#">Subcategoría 2</a></li>
+                                                          <li><a [routerLink]="['/listfilter','FA', 'Ficción moderna y contemporánea']"> Ficción moderna y contemporánea FA</a></li>
+                                                          <li><a [routerLink]="['/listfilter','FC', 'Ficción clásica']"> Ficción clásica FC</a></li>
+                                                          <li><a [routerLink]="['/listfilter','FF', 'Género policíaco y de misterio']"> Género policíaco y de misterio FF</a></li>
+                                                          <li><a [routerLink]="['/listfilter','FJ', 'Aventura']"> Aventura FJ</a></li>
+                                                          <li><a [routerLink]="['/listfilter','FL', 'Ciencia ficción']"> Ciencia ficción FL</a></li>
+                                                          <li><a [routerLink]="['/listfilter','FM', 'Fantasía']"> Fantasía FM</a></li>
+                                                          <li><a [routerLink]="['/listfilter','FR', 'Narrativa romántica']"> Narrativa romántica FR</a></li>
+                                                          <li><a [routerLink]="['/listfilter','FV', 'Ficción histórica']"> Ficción histórica FV</a></li>
+                                                          <li><a [routerLink]="['/listfilter','FX', 'Novelas gráficas']"> FNovelas gráficas FX</a></li>
+                                                          <li><a [routerLink]="['/listfilter','FK', 'Cuentos de terror y fantasmas']"> Cuentos de terror y fantasmas FK</a></li>
                                                       </ul>
                                                   </li>
                                               </ul>

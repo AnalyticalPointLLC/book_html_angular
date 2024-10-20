@@ -14,14 +14,14 @@
                 <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".3s">
                     <li>
                         <a [routerLink]="['/home']">
-                            Home
+                            Inicio
                         </a>
                     </li>
                     <li>
                         <i class="fa-solid fa-chevron-right"></i>
                     </li>
                     <li>
-                      {{ dtltipo === 'NuevosTitulos' ? 'Listado de Nuevos Títulos' : 'Listado General' }}
+                      {{ dtltipo === 'NuevosTitulos' ? 'Listado de Nuevos Títulos' : 'Listado Libros' }}
                     </li>
                 </ul>
             </div>
@@ -137,6 +137,8 @@
                                             Las artes
                                         </button>
                                     </li>
+
+
                                     <li class="nav-item" role="presentation">
                                         <button class="nav-link" id="pills-Biographies-tab" data-bs-toggle="pill"
                                             data-bs-target="#pills-Biographies" type="button" role="tab"

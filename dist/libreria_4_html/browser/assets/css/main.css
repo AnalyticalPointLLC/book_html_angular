@@ -4366,6 +4366,7 @@ span {
   margin-bottom: 30px;
   border-radius: 10px;
   border: 1px solid #E5E5E5;
+
 }
 .main-sidebar .single-sidebar-widget .wid-title {
   margin-bottom: 25px;
@@ -8230,4 +8231,11 @@ ul > li:hover .submenu {
 .no-disponible {
   color: red !important; /* Color rojo para "No Disponible" */
   font-weight: bold;
+}
+
+
+
+.nav-link {
+  text-align: left; /* Alinea el texto a la izquierda */
+  padding-left: 10px; /* Añade algo de espacio a la izquierda para margen */
 }

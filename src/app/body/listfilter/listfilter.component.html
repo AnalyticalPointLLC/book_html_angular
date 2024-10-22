@@ -9,7 +9,7 @@
     <div class="container">
         <div class="page-heading">
             <h1>
-              {{ nombreCategoria }}</h1>
+                {{ nombreCategoria }}</h1>
             <div class="page-header">
                 <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".3s">
                     <li>
@@ -21,7 +21,7 @@
                         <i class="fa-solid fa-chevron-right"></i>
                     </li>
                     <li>
-                      {{ dtltipo === 'NuevosTitulos' ? 'Listado de Nuevos Títulos' : 'Listado Libros' }}
+                        {{ dtltipo === 'NuevosTitulos' ? 'Listado de Nuevos Títulos' : 'Listado Libros' }}
                     </li>
                 </ul>
             </div>
@@ -74,13 +74,8 @@
                             </div>
                             <form action="#" class="search-toggle-box">
                                 <div class="input-area search-container">
-                                    <style>
-                                        input:focus {
-                                            color: var(--header);
-                                            outline: none;
-                                        }
-                                    </style>
-                                    <input class="search-input" type="text" [(ngModel)]="txtsearchtitulo">
+                                    <input class="search-input" type="text" [(ngModel)]="txtsearchtitulo"
+                                        style="outline: black;color: black;">
                                     <button class="cmn-btn search-icon" (click)="busquedaTitulo()">
                                         <i class="far fa-search"></i>
                                     </button>
@@ -97,25 +92,24 @@
                                     <div class="nice-select category">
                                         <select name="cate" class="category" [(ngModel)]="txtcatidioma"
                                             (change)="VoidListadoProducto()">
-                                            <option value="Español" selected>
+                                            <option value="español" selected>
                                                 Español
                                             </option>
-                                            <option value="Portugues">
+                                            <option value="portugues">
                                                 Portugués
                                             </option>
-                                            <option value="Ingles">
+                                            <option value="ingles">
                                                 Inglés
                                             </option>
-                                            <option value="Frances">
+                                            <option value="frances">
                                                 Francés
                                             </option>
-                                            <option value="Italiano">
+                                            <option value="italiano">
                                                 Italiano
                                             </option>
-                                            <option value="Aleman">
+                                            <option value="aleman">
                                                 Alemán
                                             </option>
-
                                         </select>
                                     </div>
                                 </div>
@@ -130,13 +124,23 @@
                             <div class="categories-list">
                                 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                                     <li class="nav-item" role="presentation" *ngFor="let categoria of categorias">
-                                        <button class="nav-link" [ngClass]="{'active': dtltipo === categoria.codigo_ibic}"
-                                        id="pills-{{ categoria.codigo_ibic }}-tab" data-bs-toggle="pill"
-                                        [attr.data-bs-target]="'#pills-' + categoria.codigo_ibic" type="button" role="tab"
-                                        [attr.aria-controls]="'pills-' + categoria.codigo_ibic" [attr.aria-selected]="dtltipo === categoria.codigo_ibic"
-                                        [routerLink]="['/listfilter', categoria.codigo_ibic]" (click)="onCategoriaClick(categoria)">
-                                        {{ categoria.nombre_clasificacion }}
+                                        <button class="nav-link"
+                                            [ngClass]="{'active': dtltipo === categoria.codigo_ibic}"
+                                            (click)="listadocategoria(categoria.codigo_ibic,categoria.nombre_clasificacion)">
+                                            {{ categoria.nombre_clasificacion}}
                                         </button>
+                                        <!--
+                                        <button class="nav-link"
+                                            [ngClass]="{'active': dtltipo === categoria.codigo_ibic}"
+                                            id="pills-{{ categoria.codigo_ibic }}-tab" data-bs-toggle="pill"
+                                            [attr.data-bs-target]="'#pills-' + categoria.codigo_ibic" type="button"
+                                            role="tab" [attr.aria-controls]="'pills-' + categoria.codigo_ibic"
+                                            [attr.aria-selected]="dtltipo === categoria.codigo_ibic"
+                                            [routerLink]="['/listfilter', categoria.codigo_ibic,categoria.nombre_clasificacion,txtcatidioma]"
+                                            (click)="onCategoriaClick(categoria)">
+                                            {{ categoria.nombre_clasificacion }}
+                                        </button>
+                                        -->
                                     </li>
 
                                 </ul>
@@ -282,13 +286,14 @@
                             <div class="col-xl-3 col-lg-4 col-md-6" *ngFor="let item of lstProducto">
                                 <div class="shop-box-items">
                                     <div class="book-thumb center">
-                                        <a [routerLink]="['/detail-book', item.id]"><img src="{{item.imagen_tapa}}" alt="img"></a>
+                                        <a [routerLink]="['/detail-book', item.id]"><img src="{{item.imagen_tapa}}"
+                                                alt="img"></a>
                                         <ul class="post-box">
-                                          <li *ngIf="item.promocion === 'diaria'">Nuevo Titulo</li>
-                                          <!-- <li *ngIf="item.tipo_notificacion">-{{item.discount}}%</li> -->
+                                            <li *ngIf="item.promocion === 'diaria'">Nuevo Titulo</li>
+                                            <!-- <li *ngIf="item.tipo_notificacion">-{{item.discount}}%</li> -->
 
 
-                                      </ul>
+                                        </ul>
                                         <ul class="shop-icon d-grid justify-content-center align-items-center">
                                             <li>
                                                 <a href="shop-cart.html"><i class="far fa-heart"></i></a>
@@ -305,7 +310,8 @@
                                     </div>
                                     <div class="shop-content">
                                         <p class="detalle">Autor: {{item.autor}}</p>
-                                        <h3 class="title-three-lines"><a href="shop-details.html">{{item.titulo}}</a></h3>
+                                        <h3 class="title-three-lines"><a href="shop-details.html">{{item.titulo}}</a>
+                                        </h3>
                                         <p class="isbn">ISBN-13: {{item.isbn13}}</p>
                                         <p class="isbn">IBIC: {{item.clasificacion}}</p>
                                         <p class="detalle">Idioma: {{item.idioma_edicion}}</p>
@@ -314,8 +320,10 @@
                                             <li>S./ {{item.pvp}}</li>
 
 
-                                            <li [ngClass]="{'disponible': item.tipo_notificacion === 'A', 'no-disponible': item.tipo_notificacion === 'B'}">
-                                              {{ item.tipo_notificacion === 'A' ? 'Stock Disponible' : 'No Disponible' }}
+                                            <li
+                                                [ngClass]="{'disponible': item.tipo_notificacion === 'A', 'no-disponible': item.tipo_notificacion === 'B'}">
+                                                {{ item.tipo_notificacion === 'A' ? 'Stock Disponible' : 'No Disponible'
+                                                }}
                                             </li>
 
                                             <!-- <li>
@@ -738,14 +746,18 @@
                                 -->
                         </div>
                     </div>
-                    <div class="page-nav-wrap text-center">
+                    <div class="page-nav-wrap text-center pagination">
                         <ul>
-                            <li><a class="previous" href="shop.html">Previous</a></li>
-                            <li><a class="page-numbers" href="shop.html">1</a></li>
-                            <li><a class="page-numbers" href="shop.html">2</a></li>
-                            <li><a class="page-numbers" href="shop.html">3</a></li>
-                            <li><a class="page-numbers" href="shop.html">...</a></li>
-                            <li><a class="next" href="shop.html">Next</a></li>
+                            <li>
+                                <button class="previous" (click)="previousPage()"
+                                    [disabled]="currentPage === 1">Anterior</button>
+                            </li>
+                            <li>
+                                <span>Página {{ currentPage }} de {{ totalPages }}</span>
+                            </li>
+                            <li>
+                                <button (click)="nextPage()" [disabled]="currentPage === totalPages">Siguiente</button>
+                            </li>
                         </ul>
                     </div>
                 </div>

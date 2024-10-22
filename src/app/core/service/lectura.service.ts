@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../../../environments/environment.development';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -17,10 +17,29 @@ export class LecturaService {
 
   private PrefixFilterClasificacionIdioma = '/bmg_books/classifications/prefix';
 
+  private nombreCategoriaSource = new BehaviorSubject<string>(''); // Valor inicial
+  currentNombreCategoria = this.nombreCategoriaSource.asObservable();
+
   constructor(private http: HttpClient) {}
-  getPromocionDiario(): Observable<any> {
+
+  changeNombreCategoria(nombre: string) {
+    this.nombreCategoriaSource.next(nombre);
+  }
+
+  getPromocionDiario(
+    idioma: string,
+    itemsPerPage: number,
+    currentPage: number
+  ): Observable<any> {
     return this.http.get(
-      this.baseUrl + this.promocionDiario + '?idioma=español&limit=100&offset=0'
+      this.baseUrl +
+        this.promocionDiario +
+        '?idioma=' +
+        idioma +
+        '&limit=' +
+        itemsPerPage +
+        '&offset=' +
+        currentPage
     );
   }
 
@@ -49,7 +68,12 @@ export class LecturaService {
         '?limit=100&offset=0'
     );
   }
-  getSearchtituloidioma(idioma: string, titulo: string): Observable<any> {
+  getSearchtituloidioma(
+    idioma: string,
+    titulo: string,
+    itemsPerPage: number,
+    currentPage: number
+  ): Observable<any> {
     // Nuevo método
     return this.http.get(
       this.baseUrl +
@@ -58,13 +82,18 @@ export class LecturaService {
         idioma +
         '&titulo=' +
         titulo +
-        '&limit=100&offset=0'
+        '&limit=' +
+        itemsPerPage +
+        '&offset=' +
+        currentPage
     );
   }
 
   getPrefixFilterClasificacionIdioma(
     idioma: string,
-    clasificacion: string
+    clasificacion: string,
+    itemsPerPage: number,
+    currentPage: number
   ): Observable<any> {
     // Nuevo método
     return this.http.get(
@@ -74,10 +103,10 @@ export class LecturaService {
         clasificacion +
         '/language/' +
         idioma +
-        '?limit=100&offset=0'
+        '?limit=' +
+        itemsPerPage +
+        '&offset=' +
+        currentPage
     );
   }
-
-
-
 }

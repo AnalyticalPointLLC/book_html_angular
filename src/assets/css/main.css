@@ -8242,3 +8242,131 @@ ul > li:hover .submenu {
 
 
 
+/*   -xxxxxxxxxxxxxxxxxxx  MENU CELULAR */
+
+.offcanvas__info {
+  transition: transform 0.45s ease-in-out, opacity 0.45s ease-in-out;
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.toggle-menu:checked ~ .fix-area .offcanvas__info {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.sidebar__toggle {
+  cursor: pointer;
+  position: fixed;
+  z-index: 100;
+  top: 20px;
+  right: 20px;
+}
+
+@media (max-width: 767px) {
+  .offcanvas__info {
+      width: 250px; /* Ajuste para pantallas pequeñas */
+  }
+}
+
+
+
+
+
+
+/*   -xxxxxxxxxxxxxxxxxxx MENU CELULAR CORRECCION LETRAS Y COLORES*/
+/* Estilo para el menú lateral en dispositivos móviles */
+.offcanvas__info {
+  width: 100%; /* Asegurar el ancho completo en móviles */
+  max-width: 300px; /* Limitar el ancho máximo */
+  background-color: var(--bg); /* Fondo del mismo color que el menú principal */
+  color: var(--white); /* Texto blanco para mejor contraste */
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transform: translateX(100%);
+  opacity: 0;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  overflow-y: auto; /* Permitir scroll si el contenido es largo */
+}
+
+
+.offcanvas__info ul li a {
+  color: var(--white); /* Mantener el texto blanco */
+  font-size: 16px; /* Tamaño de fuente para el menú principal */
+  padding: 10px 15px; /* Espaciado interno */
+  display: block; /* Asegurar que el área clicable sea completa */
+  text-decoration: none; /* Sin subrayado */
+}
+
+.offcanvas__info ul li a:hover {
+  background-color: var(--theme2); /* Cambiar el fondo al pasar el ratón */
+  color: var(--white) !important; /* Cambiar el texto a blanco */
+}
+
+.offcanvas__info ul li:hover > a {
+  color: var(--white); /* Cambia el color del texto a blanco */
+  background-color: var(--theme2); /* Fondo en el color var(--theme2) */
+}
+
+
+
+
+.submenu ul li a {
+  color: var(--white); /* Mantener el texto blanco */
+  font-size: 14px; /* Tamaño de fuente más pequeño para las subcategorías */
+  padding: 10px 15px; /* Espaciado interno */
+  display: block; /* Asegurar que el área clicable sea completa */
+  text-decoration: none; /* Sin subrayado */
+}
+
+.submenu ul li a:hover {
+  background-color: var(--theme2); /* Cambiar el fondo al pasar el ratón */
+  color: var(--white); /* Mantener el texto blanco */
+}
+.offcanvas__info ul li:hover > a {
+  color: var(--white); /* Cambia el color del texto a blanco */
+  background-color: var(--theme2); /* Fondo en el color var(--theme2) */
+}
+
+.offcanvas__info .submenu ul li:hover a {
+  color: var(--white); /* Cambia el color del texto a blanco */
+  background-color: var(--theme2); /* Fondo en el color var(--theme2) */
+}
+
+.label-toggle-menu {
+  cursor: pointer;
+  position: fixed;
+  z-index: 100;
+  top: 20px;
+  right: 20px;
+}
+
+@media (max-width: 767px) {
+  .submenu {
+      background-color: var(--bg);
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      margin-top: 5px;
+      padding: 0;
+      width: 100%;
+
+  }
+  .offcanvas__wrapper {
+      padding: 15px; /* Ajustar el padding para móviles */
+  }
+
+  @media (min-width: 767px) {
+    .fix-area,
+    .offcanvas__info,
+    .sidebar__toggle {
+        display: none !important;
+    }
+}
+
+}
+
+
+

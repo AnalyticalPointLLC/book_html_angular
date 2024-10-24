@@ -14,6 +14,7 @@ export class AppComponent implements OnInit {
   txtsearchtitulo: string = '';
   txtidioma: string = 'español';
 
+
   constructor(private router: Router, private lecturaservice: LecturaService) {}
 
   ngOnInit(): void {

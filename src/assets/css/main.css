@@ -8226,11 +8226,13 @@ ul > li:hover .submenu {
 .disponible {
   color: green !important; /* Color verde para "Disponible" */
   font-weight: bold;
+  text-align: right !important;
 }
 
 .no-disponible {
   color: red !important; /* Color rojo para "No Disponible" */
   font-weight: bold;
+  text-align: right !important;
 }
 
 
@@ -8366,6 +8368,17 @@ ul > li:hover .submenu {
     }
 }
 
+}
+
+
+.printdemand {
+  color: #036280 !important; /* Color verde para "Print on demand" */
+  font-weight: normal;
+}
+
+.no-printdemand {
+  color: #036280 !important; /* Color rojo para "No Print on demand" */
+  font-weight: normal;
 }
 
 

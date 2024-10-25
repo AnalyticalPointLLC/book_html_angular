@@ -101,6 +101,23 @@
 
           <ul class="price-list">
             <li>S/. {{ product.pvp }}</li>
+
+
+
+            <li
+              [ngClass]="{'disponible': product.tipo_notificacion === 'A', 'no-disponible': product.tipo_notificacion === 'B'}">
+              {{ product.tipo_notificacion === 'A' ? ' Título Disponible' : 'No Disponible'
+              }}
+              </li>
+
+          </ul>
+
+          <ul>
+            <li
+            [ngClass]="{'printdemand': product.formato === 'P', 'no-printdemand': product.formato === 'S'}">
+            {{ product.tipo_notificacion === 'A' ? 'Entrega: 10 días' : 'Título no disponible'
+            }}
+            </li>
           </ul>
 
 
@@ -170,7 +187,22 @@
 
             <ul class="price-list">
               <li>S/. {{ product.pvp }}</li>
+
+              <li
+              [ngClass]="{'disponible': product.tipo_notificacion === 'A', 'no-disponible': product.tipo_notificacion === 'B'}">
+              {{ product.tipo_notificacion === 'A' ? 'Título Disponible' : 'No Disponible'
+              }}
+              </li>
             </ul>
+            <ul>
+              <li
+              [ngClass]="{'printdemand': product.formato === 'P', 'no-printdemand': product.formato === 'S'}">
+              {{ product.tipo_notificacion === 'A' ? 'Entrega: 10 días' : 'Título no disponible'
+              }}
+              </li>
+            </ul>
+
+
             <ul class="author-post">
               <!-- <li class="authot-list">
                 <span class="content">{{ product.pais_edicion }}</span>
